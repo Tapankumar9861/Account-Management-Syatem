@@ -1,0 +1,1571 @@
+﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{B73AB1DD-2F86-44C2-84F1-9E3B223BD90F}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ERP_Login</RootNamespace>
+    <AssemblyName>ERP Login</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort>44363</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="assets\css\fontawesome-all.min.css" />
+    <Content Include="assets\css\images\close.svg" />
+    <Content Include="assets\css\main.css" />
+    <Content Include="assets\css\noscript.css" />
+    <Content Include="assets\js\breakpoints.min.js" />
+    <Content Include="assets\js\browser.min.js" />
+    <Content Include="assets\js\jquery.min.js" />
+    <Content Include="assets\js\jquery.scrollex.min.js" />
+    <Content Include="assets\js\main.js" />
+    <Content Include="assets\js\util.js" />
+    <Content Include="assets\webfonts\fa-brands-400.svg" />
+    <Content Include="assets\webfonts\fa-regular-400.svg" />
+    <Content Include="assets\webfonts\fa-solid-900.svg" />
+    <Content Include="Dsbd_css\Add_Item.aspx" />
+    <Content Include="Dsbd_css\assets\extra-libs\calendar\calendar.css" />
+    <Content Include="Dsbd_css\assets\extra-libs\DataTables\DataTables-1.10.16\css\dataTables.bootstrap.css" />
+    <Content Include="Dsbd_css\assets\extra-libs\DataTables\DataTables-1.10.16\css\dataTables.bootstrap.min.css" />
+    <Content Include="Dsbd_css\assets\extra-libs\DataTables\DataTables-1.10.16\css\dataTables.bootstrap4.css" />
+    <Content Include="Dsbd_css\assets\extra-libs\DataTables\DataTables-1.10.16\css\dataTables.bootstrap4.min.css" />
+    <Content Include="Dsbd_css\assets\extra-libs\DataTables\DataTables-1.10.16\css\dataTables.foundation.css" />
+    <Content Include="Dsbd_css\assets\extra-libs\DataTables\DataTables-1.10.16\css\dataTables.foundation.min.css" />
+    <Content Include="Dsbd_css\assets\extra-libs\DataTables\DataTables-1.10.16\css\dataTables.jqueryui.css" />
+    <Content Include="Dsbd_css\assets\extra-libs\DataTables\DataTables-1.10.16\css\dataTables.jqueryui.min.css" />
+    <Content Include="Dsbd_css\assets\extra-libs\DataTables\DataTables-1.10.16\css\dataTables.semanticui.css" />
+    <Content Include="Dsbd_css\assets\extra-libs\DataTables\DataTables-1.10.16\css\dataTables.semanticui.min.css" />
+    <Content Include="Dsbd_css\assets\extra-libs\DataTables\DataTables-1.10.16\css\jquery.dataTables.css" />
+    <Content Include="Dsbd_css\assets\extra-libs\DataTables\DataTables-1.10.16\css\jquery.dataTables.min.css" />
+    <Content Include="Dsbd_css\assets\extra-libs\DataTables\DataTables-1.10.16\images\sort_asc.png" />
+    <Content Include="Dsbd_css\assets\extra-libs\DataTables\DataTables-1.10.16\images\sort_asc_disabled.png" />
+    <Content Include="Dsbd_css\assets\extra-libs\DataTables\DataTables-1.10.16\images\sort_both.png" />
+    <Content Include="Dsbd_css\assets\extra-libs\DataTables\DataTables-1.10.16\images\sort_desc.png" />
+    <Content Include="Dsbd_css\assets\extra-libs\DataTables\DataTables-1.10.16\images\sort_desc_disabled.png" />
+    <Content Include="Dsbd_css\assets\extra-libs\DataTables\DataTables-1.10.16\js\dataTables.bootstrap.js" />
+    <Content Include="Dsbd_css\assets\extra-libs\DataTables\DataTables-1.10.16\js\dataTables.bootstrap.min.js" />
+    <Content Include="Dsbd_css\assets\extra-libs\DataTables\DataTables-1.10.16\js\dataTables.bootstrap4.js" />
+    <Content Include="Dsbd_css\assets\extra-libs\DataTables\DataTables-1.10.16\js\dataTables.bootstrap4.min.js" />
+    <Content Include="Dsbd_css\assets\extra-libs\DataTables\DataTables-1.10.16\js\dataTables.foundation.js" />
+    <Content Include="Dsbd_css\assets\extra-libs\DataTables\DataTables-1.10.16\js\dataTables.foundation.min.js" />
+    <Content Include="Dsbd_css\assets\extra-libs\DataTables\DataTables-1.10.16\js\dataTables.jqueryui.js" />
+    <Content Include="Dsbd_css\assets\extra-libs\DataTables\DataTables-1.10.16\js\dataTables.jqueryui.min.js" />
+    <Content Include="Dsbd_css\assets\extra-libs\DataTables\DataTables-1.10.16\js\dataTables.semanticui.js" />
+    <Content Include="Dsbd_css\assets\extra-libs\DataTables\DataTables-1.10.16\js\dataTables.semanticui.min.js" />
+    <Content Include="Dsbd_css\assets\extra-libs\DataTables\DataTables-1.10.16\js\jquery.dataTables.js" />
+    <Content Include="Dsbd_css\assets\extra-libs\DataTables\DataTables-1.10.16\js\jquery.dataTables.min.js" />
+    <Content Include="Dsbd_css\assets\extra-libs\DataTables\datatables.css" />
+    <Content Include="Dsbd_css\assets\extra-libs\DataTables\datatables.js" />
+    <Content Include="Dsbd_css\assets\extra-libs\DataTables\datatables.min.css" />
+    <Content Include="Dsbd_css\assets\extra-libs\DataTables\datatables.min.js" />
+    <Content Include="Dsbd_css\assets\extra-libs\gritter\jquery.gritter.css" />
+    <Content Include="Dsbd_css\assets\extra-libs\gritter\jquery.gritter.min.js" />
+    <Content Include="Dsbd_css\assets\extra-libs\multicheck\datatable-checkbox-init.js" />
+    <Content Include="Dsbd_css\assets\extra-libs\multicheck\jquery.multicheck.js" />
+    <Content Include="Dsbd_css\assets\extra-libs\multicheck\multicheck.css" />
+    <Content Include="Dsbd_css\assets\extra-libs\sparkline\sparkline.js" />
+    <Content Include="Dsbd_css\assets\images\accounting.png" />
+    <Content Include="Dsbd_css\assets\images\background\error-bg.jpg" />
+    <Content Include="Dsbd_css\assets\images\background\img4.jpg" />
+    <Content Include="Dsbd_css\assets\images\background\img5.jpg" />
+    <Content Include="Dsbd_css\assets\images\background\img6.jpg" />
+    <Content Include="Dsbd_css\assets\images\bank.png" />
+    <Content Include="Dsbd_css\assets\images\big\img1.jpg" />
+    <Content Include="Dsbd_css\assets\images\big\img2.jpg" />
+    <Content Include="Dsbd_css\assets\images\big\img3.jpg" />
+    <Content Include="Dsbd_css\assets\images\big\img4.jpg" />
+    <Content Include="Dsbd_css\assets\images\big\img5.jpg" />
+    <Content Include="Dsbd_css\assets\images\big\img6.jpg" />
+    <Content Include="Dsbd_css\assets\images\bill.png" />
+    <Content Include="Dsbd_css\assets\images\booking.png" />
+    <Content Include="Dsbd_css\assets\images\boxes.png" />
+    <Content Include="Dsbd_css\assets\images\charge.png" />
+    <Content Include="Dsbd_css\assets\images\cheque.png" />
+    <Content Include="Dsbd_css\assets\images\conversation.png" />
+    <Content Include="Dsbd_css\assets\images\custom-select.png" />
+    <Content Include="Dsbd_css\assets\images\customer-service.png" />
+    <Content Include="Dsbd_css\assets\images\dollar.png" />
+    <Content Include="Dsbd_css\assets\images\economy.png" />
+    <Content Include="Dsbd_css\assets\images\exchange %281%29.png" />
+    <Content Include="Dsbd_css\assets\images\exchange.png" />
+    <Content Include="Dsbd_css\assets\images\expenses.png" />
+    <Content Include="Dsbd_css\assets\images\fac01.png" />
+    <Content Include="Dsbd_css\assets\images\favicon.png" />
+    <Content Include="Dsbd_css\assets\images\free-demo.jpg" />
+    <Content Include="Dsbd_css\assets\images\giftbox.png" />
+    <Content Include="Dsbd_css\assets\images\handshake.png" />
+    <Content Include="Dsbd_css\assets\images\img0011.png" />
+    <Content Include="Dsbd_css\assets\images\img01.png" />
+    <Content Include="Dsbd_css\assets\images\img02.jpeg" />
+    <Content Include="Dsbd_css\assets\images\img03.jpeg" />
+    <Content Include="Dsbd_css\assets\images\img04.jpeg" />
+    <Content Include="Dsbd_css\assets\images\img05.png" />
+    <Content Include="Dsbd_css\assets\images\img06.jpeg" />
+    <Content Include="Dsbd_css\assets\images\img07.png" />
+    <Content Include="Dsbd_css\assets\images\img08.png" />
+    <Content Include="Dsbd_css\assets\images\img10.png" />
+    <Content Include="Dsbd_css\assets\images\img11.jpeg" />
+    <Content Include="Dsbd_css\assets\images\img12.png" />
+    <Content Include="Dsbd_css\assets\images\img13.png" />
+    <Content Include="Dsbd_css\assets\images\img14.jpg" />
+    <Content Include="Dsbd_css\assets\images\img15.jpeg" />
+    <Content Include="Dsbd_css\assets\images\img16.jpeg" />
+    <Content Include="Dsbd_css\assets\images\img17.jpg" />
+    <Content Include="Dsbd_css\assets\images\invoice.png" />
+    <Content Include="Dsbd_css\assets\images\loan.png" />
+    <Content Include="Dsbd_css\assets\images\logo-icon.png" />
+    <Content Include="Dsbd_css\assets\images\logo-text.png" />
+    <Content Include="Dsbd_css\assets\images\logo.png" />
+    <Content Include="Dsbd_css\assets\images\logo1.jpeg" />
+    <Content Include="Dsbd_css\assets\images\man.png" />
+    <Content Include="Dsbd_css\assets\images\management.png" />
+    <Content Include="Dsbd_css\assets\images\mobile-shopping.png" />
+    <Content Include="Dsbd_css\assets\images\money-transfer.png" />
+    <Content Include="Dsbd_css\assets\images\money.png" />
+    <Content Include="Dsbd_css\assets\images\money01.png" />
+    <Content Include="Dsbd_css\assets\images\order.png" />
+    <Content Include="Dsbd_css\assets\images\printer.png" />
+    <Content Include="Dsbd_css\assets\images\quotation.png" />
+    <Content Include="Dsbd_css\assets\images\receipt.png" />
+    <Content Include="Dsbd_css\assets\images\report.png" />
+    <Content Include="Dsbd_css\assets\images\request-money.png" />
+    <Content Include="Dsbd_css\assets\images\restore.png" />
+    <Content Include="Dsbd_css\assets\images\seminar01.jpg" />
+    <Content Include="Dsbd_css\assets\images\seminar02.png" />
+    <Content Include="Dsbd_css\assets\images\settings.png" />
+    <Content Include="Dsbd_css\assets\images\shopping-cart %281%29.png" />
+    <Content Include="Dsbd_css\assets\images\sports01.jpeg" />
+    <Content Include="Dsbd_css\assets\images\store.png" />
+    <Content Include="Dsbd_css\assets\images\sync.png" />
+    <Content Include="Dsbd_css\assets\images\tax-reminder.png" />
+    <Content Include="Dsbd_css\assets\images\tax.png" />
+    <Content Include="Dsbd_css\assets\images\track1.png" />
+    <Content Include="Dsbd_css\assets\images\users\1-old.jpg" />
+    <Content Include="Dsbd_css\assets\images\users\1.jpg" />
+    <Content Include="Dsbd_css\assets\images\users\1.png" />
+    <Content Include="Dsbd_css\assets\images\users\2.jpg" />
+    <Content Include="Dsbd_css\assets\images\users\2.png" />
+    <Content Include="Dsbd_css\assets\images\users\3.jpg" />
+    <Content Include="Dsbd_css\assets\images\users\3.png" />
+    <Content Include="Dsbd_css\assets\images\users\4.jpg" />
+    <Content Include="Dsbd_css\assets\images\users\5.jpg" />
+    <Content Include="Dsbd_css\assets\images\users\6.jpg" />
+    <Content Include="Dsbd_css\assets\images\users\7.jpg" />
+    <Content Include="Dsbd_css\assets\images\users\8.jpg" />
+    <Content Include="Dsbd_css\assets\images\users\add-item.png" />
+    <Content Include="Dsbd_css\assets\images\users\agent.jpg" />
+    <Content Include="Dsbd_css\assets\images\users\agent2.jpg" />
+    <Content Include="Dsbd_css\assets\images\users\AHTS.jpg" />
+    <Content Include="Dsbd_css\assets\images\users\all.png" />
+    <Content Include="Dsbd_css\assets\images\users\bank_reconciliation.png" />
+    <Content Include="Dsbd_css\assets\images\users\calendar.png" />
+    <Content Include="Dsbd_css\assets\images\users\d1.jpg" />
+    <Content Include="Dsbd_css\assets\images\users\d2.jpg" />
+    <Content Include="Dsbd_css\assets\images\users\d3.jpg" />
+    <Content Include="Dsbd_css\assets\images\users\d4.jpg" />
+    <Content Include="Dsbd_css\assets\images\users\d5.jpg" />
+    <Content Include="Dsbd_css\assets\images\users\download1.jpeg" />
+    <Content Include="Dsbd_css\assets\images\users\Expense.png" />
+    <Content Include="Dsbd_css\assets\images\users\finance.png" />
+    <Content Include="Dsbd_css\assets\images\users\money.png" />
+    <Content Include="Dsbd_css\assets\images\users\Payment_mode.png" />
+    <Content Include="Dsbd_css\assets\images\users\profile.png" />
+    <Content Include="Dsbd_css\assets\images\users\profit.png" />
+    <Content Include="Dsbd_css\assets\images\users\public-service.png" />
+    <Content Include="Dsbd_css\assets\images\users\receive-amount.png" />
+    <Content Include="Dsbd_css\assets\images\users\report.png" />
+    <Content Include="Dsbd_css\assets\images\users\self-service.png" />
+    <Content Include="Dsbd_css\assets\images\users\systems.png" />
+    <Content Include="Dsbd_css\assets\images\users\view.png" />
+    <Content Include="Dsbd_css\assets\images\withdraw.png" />
+    <Content Include="Dsbd_css\assets\libs\bootstrap-datepicker\dist\css\bootstrap-datepicker.min.css" />
+    <Content Include="Dsbd_css\assets\libs\bootstrap-datepicker\dist\css\bootstrap-datepicker.standalone.min.css" />
+    <Content Include="Dsbd_css\assets\libs\bootstrap-datepicker\dist\css\bootstrap-datepicker3.min.css" />
+    <Content Include="Dsbd_css\assets\libs\bootstrap-datepicker\dist\css\bootstrap-datepicker3.standalone.min.css" />
+    <Content Include="Dsbd_css\assets\libs\bootstrap-datepicker\dist\js\bootstrap-datepicker.min.js" />
+    <Content Include="Dsbd_css\assets\libs\bootstrap-datepicker\dist\locales\bootstrap-datepicker-en-CA.min.js" />
+    <Content Include="Dsbd_css\assets\libs\bootstrap-datepicker\dist\locales\bootstrap-datepicker.ar-tn.min.js" />
+    <Content Include="Dsbd_css\assets\libs\bootstrap-datepicker\dist\locales\bootstrap-datepicker.ar.min.js" />
+    <Content Include="Dsbd_css\assets\libs\bootstrap-datepicker\dist\locales\bootstrap-datepicker.az.min.js" />
+    <Content Include="Dsbd_css\assets\libs\bootstrap-datepicker\dist\locales\bootstrap-datepicker.bg.min.js" />
+    <Content Include="Dsbd_css\assets\libs\bootstrap-datepicker\dist\locales\bootstrap-datepicker.bn.min.js" />
+    <Content Include="Dsbd_css\assets\libs\bootstrap-datepicker\dist\locales\bootstrap-datepicker.br.min.js" />
+    <Content Include="Dsbd_css\assets\libs\bootstrap-datepicker\dist\locales\bootstrap-datepicker.bs.min.js" />
+    <Content Include="Dsbd_css\assets\libs\bootstrap-datepicker\dist\locales\bootstrap-datepicker.ca.min.js" />
+    <Content Include="Dsbd_css\assets\libs\bootstrap-datepicker\dist\locales\bootstrap-datepicker.cs.min.js" />
+    <Content Include="Dsbd_css\assets\libs\bootstrap-datepicker\dist\locales\bootstrap-datepicker.cy.min.js" />
+    <Content Include="Dsbd_css\assets\libs\bootstrap-datepicker\dist\locales\bootstrap-datepicker.da.min.js" />
+    <Content Include="Dsbd_css\assets\libs\bootstrap-datepicker\dist\locales\bootstrap-datepicker.de.min.js" />
+    <Content Include="Dsbd_css\assets\libs\bootstrap-datepicker\dist\locales\bootstrap-datepicker.el.min.js" />
+    <Content Include="Dsbd_css\assets\libs\bootstrap-datepicker\dist\locales\bootstrap-datepicker.en-AU.min.js" />
+    <Content Include="Dsbd_css\assets\libs\bootstrap-datepicker\dist\locales\bootstrap-datepicker.en-CA.min.js" />
+    <Content Include="Dsbd_css\assets\libs\bootstrap-datepicker\dist\locales\bootstrap-datepicker.en-GB.min.js" />
+    <Content Include="Dsbd_css\assets\libs\bootstrap-datepicker\dist\locales\bootstrap-datepicker.en-IE.min.js" />
+    <Content Include="Dsbd_css\assets\libs\bootstrap-datepicker\dist\locales\bootstrap-datepicker.en-NZ.min.js" />
+    <Content Include="Dsbd_css\assets\libs\bootstrap-datepicker\dist\locales\bootstrap-datepicker.en-ZA.min.js" />
+    <Content Include="Dsbd_css\assets\libs\bootstrap-datepicker\dist\locales\bootstrap-datepicker.eo.min.js" />
+    <Content Include="Dsbd_css\assets\libs\bootstrap-datepicker\dist\locales\bootstrap-datepicker.es.min.js" />
+    <Content Include="Dsbd_css\assets\libs\bootstrap-datepicker\dist\locales\bootstrap-datepicker.et.min.js" />
+    <Content Include="Dsbd_css\assets\libs\bootstrap-datepicker\dist\locales\bootstrap-datepicker.eu.min.js" />
+    <Content Include="Dsbd_css\assets\libs\bootstrap-datepicker\dist\locales\bootstrap-datepicker.fa.min.js" />
+    <Content Include="Dsbd_css\assets\libs\bootstrap-datepicker\dist\locales\bootstrap-datepicker.fi.min.js" />
+    <Content Include="Dsbd_css\assets\libs\bootstrap-datepicker\dist\locales\bootstrap-datepicker.fo.min.js" />
+    <Content Include="Dsbd_css\assets\libs\bootstrap-datepicker\dist\locales\bootstrap-datepicker.fr-CH.min.js" />
+    <Content Include="Dsbd_css\assets\libs\bootstrap-datepicker\dist\locales\bootstrap-datepicker.fr.min.js" />
+    <Content Include="Dsbd_css\assets\libs\bootstrap-datepicker\dist\locales\bootstrap-datepicker.gl.min.js" />
+    <Content Include="Dsbd_css\assets\libs\bootstrap-datepicker\dist\locales\bootstrap-datepicker.he.min.js" />
+    <Content Include="Dsbd_css\assets\libs\bootstrap-datepicker\dist\locales\bootstrap-datepicker.hi.min.js" />
+    <Content Include="Dsbd_css\assets\libs\bootstrap-datepicker\dist\locales\bootstrap-datepicker.hr.min.js" />
+    <Content Include="Dsbd_css\assets\libs\bootstrap-datepicker\dist\locales\bootstrap-datepicker.hu.min.js" />
+    <Content Include="Dsbd_css\assets\libs\bootstrap-datepicker\dist\locales\bootstrap-datepicker.hy.min.js" />
+    <Content Include="Dsbd_css\assets\libs\bootstrap-datepicker\dist\locales\bootstrap-datepicker.id.min.js" />
+    <Content Include="Dsbd_css\assets\libs\bootstrap-datepicker\dist\locales\bootstrap-datepicker.is.min.js" />
+    <Content Include="Dsbd_css\assets\libs\bootstrap-datepicker\dist\locales\bootstrap-datepicker.it-CH.min.js" />
+    <Content Include="Dsbd_css\assets\libs\bootstrap-datepicker\dist\locales\bootstrap-datepicker.it.min.js" />
+    <Content Include="Dsbd_css\assets\libs\bootstrap-datepicker\dist\locales\bootstrap-datepicker.ja.min.js" />
+    <Content Include="Dsbd_css\assets\libs\bootstrap-datepicker\dist\locales\bootstrap-datepicker.ka.min.js" />
+    <Content Include="Dsbd_css\assets\libs\bootstrap-datepicker\dist\locales\bootstrap-datepicker.kh.min.js" />
+    <Content Include="Dsbd_css\assets\libs\bootstrap-datepicker\dist\locales\bootstrap-datepicker.kk.min.js" />
+    <Content Include="Dsbd_css\assets\libs\bootstrap-datepicker\dist\locales\bootstrap-datepicker.km.min.js" />
+    <Content Include="Dsbd_css\assets\libs\bootstrap-datepicker\dist\locales\bootstrap-datepicker.ko.min.js" />
+    <Content Include="Dsbd_css\assets\libs\bootstrap-datepicker\dist\locales\bootstrap-datepicker.kr.min.js" />
+    <Content Include="Dsbd_css\assets\libs\bootstrap-datepicker\dist\locales\bootstrap-datepicker.lt.min.js" />
+    <Content Include="Dsbd_css\assets\libs\bootstrap-datepicker\dist\locales\bootstrap-datepicker.lv.min.js" />
+    <Content Include="Dsbd_css\assets\libs\bootstrap-datepicker\dist\locales\bootstrap-datepicker.me.min.js" />
+    <Content Include="Dsbd_css\assets\libs\bootstrap-datepicker\dist\locales\bootstrap-datepicker.mk.min.js" />
+    <Content Include="Dsbd_css\assets\libs\bootstrap-datepicker\dist\locales\bootstrap-datepicker.mn.min.js" />
+    <Content Include="Dsbd_css\assets\libs\bootstrap-datepicker\dist\locales\bootstrap-datepicker.ms.min.js" />
+    <Content Include="Dsbd_css\assets\libs\bootstrap-datepicker\dist\locales\bootstrap-datepicker.nl-BE.min.js" />
+    <Content Include="Dsbd_css\assets\libs\bootstrap-datepicker\dist\locales\bootstrap-datepicker.nl.min.js" />
+    <Content Include="Dsbd_css\assets\libs\bootstrap-datepicker\dist\locales\bootstrap-datepicker.no.min.js" />
+    <Content Include="Dsbd_css\assets\libs\bootstrap-datepicker\dist\locales\bootstrap-datepicker.oc.min.js" />
+    <Content Include="Dsbd_css\assets\libs\bootstrap-datepicker\dist\locales\bootstrap-datepicker.pl.min.js" />
+    <Content Include="Dsbd_css\assets\libs\bootstrap-datepicker\dist\locales\bootstrap-datepicker.pt-BR.min.js" />
+    <Content Include="Dsbd_css\assets\libs\bootstrap-datepicker\dist\locales\bootstrap-datepicker.pt.min.js" />
+    <Content Include="Dsbd_css\assets\libs\bootstrap-datepicker\dist\locales\bootstrap-datepicker.ro.min.js" />
+    <Content Include="Dsbd_css\assets\libs\bootstrap-datepicker\dist\locales\bootstrap-datepicker.rs-latin.min.js" />
+    <Content Include="Dsbd_css\assets\libs\bootstrap-datepicker\dist\locales\bootstrap-datepicker.rs.min.js" />
+    <Content Include="Dsbd_css\assets\libs\bootstrap-datepicker\dist\locales\bootstrap-datepicker.ru.min.js" />
+    <Content Include="Dsbd_css\assets\libs\bootstrap-datepicker\dist\locales\bootstrap-datepicker.si.min.js" />
+    <Content Include="Dsbd_css\assets\libs\bootstrap-datepicker\dist\locales\bootstrap-datepicker.sk.min.js" />
+    <Content Include="Dsbd_css\assets\libs\bootstrap-datepicker\dist\locales\bootstrap-datepicker.sl.min.js" />
+    <Content Include="Dsbd_css\assets\libs\bootstrap-datepicker\dist\locales\bootstrap-datepicker.sq.min.js" />
+    <Content Include="Dsbd_css\assets\libs\bootstrap-datepicker\dist\locales\bootstrap-datepicker.sr-latin.min.js" />
+    <Content Include="Dsbd_css\assets\libs\bootstrap-datepicker\dist\locales\bootstrap-datepicker.sr.min.js" />
+    <Content Include="Dsbd_css\assets\libs\bootstrap-datepicker\dist\locales\bootstrap-datepicker.sv.min.js" />
+    <Content Include="Dsbd_css\assets\libs\bootstrap-datepicker\dist\locales\bootstrap-datepicker.sw.min.js" />
+    <Content Include="Dsbd_css\assets\libs\bootstrap-datepicker\dist\locales\bootstrap-datepicker.ta.min.js" />
+    <Content Include="Dsbd_css\assets\libs\bootstrap-datepicker\dist\locales\bootstrap-datepicker.tg.min.js" />
+    <Content Include="Dsbd_css\assets\libs\bootstrap-datepicker\dist\locales\bootstrap-datepicker.th.min.js" />
+    <Content Include="Dsbd_css\assets\libs\bootstrap-datepicker\dist\locales\bootstrap-datepicker.tk.min.js" />
+    <Content Include="Dsbd_css\assets\libs\bootstrap-datepicker\dist\locales\bootstrap-datepicker.tr.min.js" />
+    <Content Include="Dsbd_css\assets\libs\bootstrap-datepicker\dist\locales\bootstrap-datepicker.uk.min.js" />
+    <Content Include="Dsbd_css\assets\libs\bootstrap-datepicker\dist\locales\bootstrap-datepicker.uz-cyrl.min.js" />
+    <Content Include="Dsbd_css\assets\libs\bootstrap-datepicker\dist\locales\bootstrap-datepicker.uz-latn.min.js" />
+    <Content Include="Dsbd_css\assets\libs\bootstrap-datepicker\dist\locales\bootstrap-datepicker.vi.min.js" />
+    <Content Include="Dsbd_css\assets\libs\bootstrap-datepicker\dist\locales\bootstrap-datepicker.zh-CN.min.js" />
+    <Content Include="Dsbd_css\assets\libs\bootstrap-datepicker\dist\locales\bootstrap-datepicker.zh-TW.min.js" />
+    <Content Include="Dsbd_css\assets\libs\bootstrap\dist\css\bootstrap-grid.css" />
+    <Content Include="Dsbd_css\assets\libs\bootstrap\dist\css\bootstrap-grid.min.css" />
+    <Content Include="Dsbd_css\assets\libs\bootstrap\dist\css\bootstrap-grid.rtl.css" />
+    <Content Include="Dsbd_css\assets\libs\bootstrap\dist\css\bootstrap-grid.rtl.min.css" />
+    <Content Include="Dsbd_css\assets\libs\bootstrap\dist\css\bootstrap-reboot.css" />
+    <Content Include="Dsbd_css\assets\libs\bootstrap\dist\css\bootstrap-reboot.min.css" />
+    <Content Include="Dsbd_css\assets\libs\bootstrap\dist\css\bootstrap-reboot.rtl.css" />
+    <Content Include="Dsbd_css\assets\libs\bootstrap\dist\css\bootstrap-reboot.rtl.min.css" />
+    <Content Include="Dsbd_css\assets\libs\bootstrap\dist\css\bootstrap-utilities.css" />
+    <Content Include="Dsbd_css\assets\libs\bootstrap\dist\css\bootstrap-utilities.min.css" />
+    <Content Include="Dsbd_css\assets\libs\bootstrap\dist\css\bootstrap-utilities.rtl.css" />
+    <Content Include="Dsbd_css\assets\libs\bootstrap\dist\css\bootstrap-utilities.rtl.min.css" />
+    <Content Include="Dsbd_css\assets\libs\bootstrap\dist\css\bootstrap.css" />
+    <Content Include="Dsbd_css\assets\libs\bootstrap\dist\css\bootstrap.min.css" />
+    <Content Include="Dsbd_css\assets\libs\bootstrap\dist\css\bootstrap.rtl.css" />
+    <Content Include="Dsbd_css\assets\libs\bootstrap\dist\css\bootstrap.rtl.min.css" />
+    <Content Include="Dsbd_css\assets\libs\bootstrap\dist\js\bootstrap.bundle.js" />
+    <Content Include="Dsbd_css\assets\libs\bootstrap\dist\js\bootstrap.bundle.min.js" />
+    <Content Include="Dsbd_css\assets\libs\bootstrap\dist\js\bootstrap.esm.js" />
+    <Content Include="Dsbd_css\assets\libs\bootstrap\dist\js\bootstrap.esm.min.js" />
+    <Content Include="Dsbd_css\assets\libs\bootstrap\dist\js\bootstrap.js" />
+    <Content Include="Dsbd_css\assets\libs\bootstrap\dist\js\bootstrap.min.js" />
+    <Content Include="Dsbd_css\assets\libs\chart\chart.js" />
+    <Content Include="Dsbd_css\assets\libs\chart\excanvas.min.js" />
+    <Content Include="Dsbd_css\assets\libs\chart\jquery.flot.min.js" />
+    <Content Include="Dsbd_css\assets\libs\chart\jquery.flot.pie.min.js" />
+    <Content Include="Dsbd_css\assets\libs\chart\jquery.flot.resize.min.js" />
+    <Content Include="Dsbd_css\assets\libs\chart\jquery.peity.min.js" />
+    <Content Include="Dsbd_css\assets\libs\chart\jquery.ui.custom.js" />
+    <Content Include="Dsbd_css\assets\libs\chart\matrix.charts.js" />
+    <Content Include="Dsbd_css\assets\libs\chart\matrix.dashboard.js" />
+    <Content Include="Dsbd_css\assets\libs\chart\matrix.interface.js" />
+    <Content Include="Dsbd_css\assets\libs\chart\turning-series.js" />
+    <Content Include="Dsbd_css\assets\libs\datatables.net-bs4\css\dataTables.bootstrap4.css" />
+    <Content Include="Dsbd_css\assets\libs\datatables.net-bs4\js\dataTables.bootstrap4.js" />
+    <Content Include="Dsbd_css\assets\libs\datatables\license.txt" />
+    <Content Include="Dsbd_css\assets\libs\datatables\media\css\jquery.dataTables.min.css" />
+    <Content Include="Dsbd_css\assets\libs\datatables\media\images\favicon.ico" />
+    <Content Include="Dsbd_css\assets\libs\datatables\media\images\sort_asc.png" />
+    <Content Include="Dsbd_css\assets\libs\datatables\media\images\sort_asc_disabled.png" />
+    <Content Include="Dsbd_css\assets\libs\datatables\media\images\sort_both.png" />
+    <Content Include="Dsbd_css\assets\libs\datatables\media\images\sort_desc.png" />
+    <Content Include="Dsbd_css\assets\libs\datatables\media\images\sort_desc_disabled.png" />
+    <Content Include="Dsbd_css\assets\libs\datatables\media\js\jquery.dataTables.min.js" />
+    <Content Include="Dsbd_css\assets\libs\flot.tooltip\js\excanvas.min.js" />
+    <Content Include="Dsbd_css\assets\libs\flot.tooltip\js\jquery.flot.js" />
+    <Content Include="Dsbd_css\assets\libs\flot.tooltip\js\jquery.flot.tooltip.js" />
+    <Content Include="Dsbd_css\assets\libs\flot.tooltip\js\jquery.flot.tooltip.min.js" />
+    <Content Include="Dsbd_css\assets\libs\flot.tooltip\js\jquery.flot.tooltip.source.js" />
+    <Content Include="Dsbd_css\assets\libs\flot\css\float-chart.css" />
+    <Content Include="Dsbd_css\assets\libs\flot\examples\ajax\index.html" />
+    <Content Include="Dsbd_css\assets\libs\flot\examples\annotating\index.html" />
+    <Content Include="Dsbd_css\assets\libs\flot\examples\axes-interacting\index.html" />
+    <Content Include="Dsbd_css\assets\libs\flot\examples\axes-multiple\index.html" />
+    <Content Include="Dsbd_css\assets\libs\flot\examples\axes-time-zones\date.js" />
+    <Content Include="Dsbd_css\assets\libs\flot\examples\axes-time-zones\index.html" />
+    <Content Include="Dsbd_css\assets\libs\flot\examples\axes-time\index.html" />
+    <Content Include="Dsbd_css\assets\libs\flot\examples\background.png" />
+    <Content Include="Dsbd_css\assets\libs\flot\examples\basic-options\index.html" />
+    <Content Include="Dsbd_css\assets\libs\flot\examples\basic-usage\index.html" />
+    <Content Include="Dsbd_css\assets\libs\flot\examples\canvas\index.html" />
+    <Content Include="Dsbd_css\assets\libs\flot\examples\categories\index.html" />
+    <Content Include="Dsbd_css\assets\libs\flot\examples\examples.css" />
+    <Content Include="Dsbd_css\assets\libs\flot\examples\image\hs-2004-27-a-large-web.jpg" />
+    <Content Include="Dsbd_css\assets\libs\flot\examples\image\index.html" />
+    <Content Include="Dsbd_css\assets\libs\flot\examples\index.html" />
+    <Content Include="Dsbd_css\assets\libs\flot\examples\interacting\index.html" />
+    <Content Include="Dsbd_css\assets\libs\flot\examples\navigate\arrow-down.gif" />
+    <Content Include="Dsbd_css\assets\libs\flot\examples\navigate\arrow-left.gif" />
+    <Content Include="Dsbd_css\assets\libs\flot\examples\navigate\arrow-right.gif" />
+    <Content Include="Dsbd_css\assets\libs\flot\examples\navigate\arrow-up.gif" />
+    <Content Include="Dsbd_css\assets\libs\flot\examples\navigate\index.html" />
+    <Content Include="Dsbd_css\assets\libs\flot\examples\percentiles\index.html" />
+    <Content Include="Dsbd_css\assets\libs\flot\examples\realtime\index.html" />
+    <Content Include="Dsbd_css\assets\libs\flot\examples\resize\index.html" />
+    <Content Include="Dsbd_css\assets\libs\flot\examples\selection\index.html" />
+    <Content Include="Dsbd_css\assets\libs\flot\examples\series-errorbars\index.html" />
+    <Content Include="Dsbd_css\assets\libs\flot\examples\series-pie\index.html" />
+    <Content Include="Dsbd_css\assets\libs\flot\examples\series-toggle\index.html" />
+    <Content Include="Dsbd_css\assets\libs\flot\examples\series-types\index.html" />
+    <Content Include="Dsbd_css\assets\libs\flot\examples\shared\jquery-ui\jquery-ui.min.css" />
+    <Content Include="Dsbd_css\assets\libs\flot\examples\stacking\index.html" />
+    <Content Include="Dsbd_css\assets\libs\flot\examples\symbols\index.html" />
+    <Content Include="Dsbd_css\assets\libs\flot\examples\threshold\index.html" />
+    <Content Include="Dsbd_css\assets\libs\flot\examples\tracking\index.html" />
+    <Content Include="Dsbd_css\assets\libs\flot\examples\visitors\index.html" />
+    <Content Include="Dsbd_css\assets\libs\flot\examples\zooming\index.html" />
+    <Content Include="Dsbd_css\assets\libs\flot\excanvas.js" />
+    <Content Include="Dsbd_css\assets\libs\flot\excanvas.min.js" />
+    <Content Include="Dsbd_css\assets\libs\flot\jquery.colorhelpers.js" />
+    <Content Include="Dsbd_css\assets\libs\flot\jquery.flot.canvas.js" />
+    <Content Include="Dsbd_css\assets\libs\flot\jquery.flot.categories.js" />
+    <Content Include="Dsbd_css\assets\libs\flot\jquery.flot.crosshair.js" />
+    <Content Include="Dsbd_css\assets\libs\flot\jquery.flot.errorbars.js" />
+    <Content Include="Dsbd_css\assets\libs\flot\jquery.flot.fillbetween.js" />
+    <Content Include="Dsbd_css\assets\libs\flot\jquery.flot.image.js" />
+    <Content Include="Dsbd_css\assets\libs\flot\jquery.flot.js" />
+    <Content Include="Dsbd_css\assets\libs\flot\jquery.flot.navigate.js" />
+    <Content Include="Dsbd_css\assets\libs\flot\jquery.flot.pie.js" />
+    <Content Include="Dsbd_css\assets\libs\flot\jquery.flot.resize.js" />
+    <Content Include="Dsbd_css\assets\libs\flot\jquery.flot.selection.js" />
+    <Content Include="Dsbd_css\assets\libs\flot\jquery.flot.stack.js" />
+    <Content Include="Dsbd_css\assets\libs\flot\jquery.flot.symbol.js" />
+    <Content Include="Dsbd_css\assets\libs\flot\jquery.flot.threshold.js" />
+    <Content Include="Dsbd_css\assets\libs\flot\jquery.flot.time.js" />
+    <Content Include="Dsbd_css\assets\libs\flot\jquery.js" />
+    <Content Include="Dsbd_css\assets\libs\flot\LICENSE.txt" />
+    <Content Include="Dsbd_css\assets\libs\fullcalendar\dist\fullcalendar.min.css" />
+    <Content Include="Dsbd_css\assets\libs\fullcalendar\dist\fullcalendar.min.js" />
+    <Content Include="Dsbd_css\assets\libs\fullcalendar\dist\fullcalendar.print.min.css" />
+    <Content Include="Dsbd_css\assets\libs\fullcalendar\dist\gcal.min.js" />
+    <Content Include="Dsbd_css\assets\libs\fullcalendar\dist\locale-all.js" />
+    <Content Include="Dsbd_css\assets\libs\fullcalendar\dist\locale\af.js" />
+    <Content Include="Dsbd_css\assets\libs\fullcalendar\dist\locale\ar-dz.js" />
+    <Content Include="Dsbd_css\assets\libs\fullcalendar\dist\locale\ar-kw.js" />
+    <Content Include="Dsbd_css\assets\libs\fullcalendar\dist\locale\ar-ly.js" />
+    <Content Include="Dsbd_css\assets\libs\fullcalendar\dist\locale\ar-ma.js" />
+    <Content Include="Dsbd_css\assets\libs\fullcalendar\dist\locale\ar-sa.js" />
+    <Content Include="Dsbd_css\assets\libs\fullcalendar\dist\locale\ar-tn.js" />
+    <Content Include="Dsbd_css\assets\libs\fullcalendar\dist\locale\ar.js" />
+    <Content Include="Dsbd_css\assets\libs\fullcalendar\dist\locale\bg.js" />
+    <Content Include="Dsbd_css\assets\libs\fullcalendar\dist\locale\bs.js" />
+    <Content Include="Dsbd_css\assets\libs\fullcalendar\dist\locale\ca.js" />
+    <Content Include="Dsbd_css\assets\libs\fullcalendar\dist\locale\cs.js" />
+    <Content Include="Dsbd_css\assets\libs\fullcalendar\dist\locale\da.js" />
+    <Content Include="Dsbd_css\assets\libs\fullcalendar\dist\locale\de-at.js" />
+    <Content Include="Dsbd_css\assets\libs\fullcalendar\dist\locale\de-ch.js" />
+    <Content Include="Dsbd_css\assets\libs\fullcalendar\dist\locale\de.js" />
+    <Content Include="Dsbd_css\assets\libs\fullcalendar\dist\locale\el.js" />
+    <Content Include="Dsbd_css\assets\libs\fullcalendar\dist\locale\en-au.js" />
+    <Content Include="Dsbd_css\assets\libs\fullcalendar\dist\locale\en-ca.js" />
+    <Content Include="Dsbd_css\assets\libs\fullcalendar\dist\locale\en-gb.js" />
+    <Content Include="Dsbd_css\assets\libs\fullcalendar\dist\locale\en-ie.js" />
+    <Content Include="Dsbd_css\assets\libs\fullcalendar\dist\locale\en-nz.js" />
+    <Content Include="Dsbd_css\assets\libs\fullcalendar\dist\locale\es-do.js" />
+    <Content Include="Dsbd_css\assets\libs\fullcalendar\dist\locale\es-us.js" />
+    <Content Include="Dsbd_css\assets\libs\fullcalendar\dist\locale\es.js" />
+    <Content Include="Dsbd_css\assets\libs\fullcalendar\dist\locale\et.js" />
+    <Content Include="Dsbd_css\assets\libs\fullcalendar\dist\locale\eu.js" />
+    <Content Include="Dsbd_css\assets\libs\fullcalendar\dist\locale\fa.js" />
+    <Content Include="Dsbd_css\assets\libs\fullcalendar\dist\locale\fi.js" />
+    <Content Include="Dsbd_css\assets\libs\fullcalendar\dist\locale\fr-ca.js" />
+    <Content Include="Dsbd_css\assets\libs\fullcalendar\dist\locale\fr-ch.js" />
+    <Content Include="Dsbd_css\assets\libs\fullcalendar\dist\locale\fr.js" />
+    <Content Include="Dsbd_css\assets\libs\fullcalendar\dist\locale\gl.js" />
+    <Content Include="Dsbd_css\assets\libs\fullcalendar\dist\locale\he.js" />
+    <Content Include="Dsbd_css\assets\libs\fullcalendar\dist\locale\hi.js" />
+    <Content Include="Dsbd_css\assets\libs\fullcalendar\dist\locale\hr.js" />
+    <Content Include="Dsbd_css\assets\libs\fullcalendar\dist\locale\hu.js" />
+    <Content Include="Dsbd_css\assets\libs\fullcalendar\dist\locale\id.js" />
+    <Content Include="Dsbd_css\assets\libs\fullcalendar\dist\locale\is.js" />
+    <Content Include="Dsbd_css\assets\libs\fullcalendar\dist\locale\it.js" />
+    <Content Include="Dsbd_css\assets\libs\fullcalendar\dist\locale\ja.js" />
+    <Content Include="Dsbd_css\assets\libs\fullcalendar\dist\locale\ka.js" />
+    <Content Include="Dsbd_css\assets\libs\fullcalendar\dist\locale\kk.js" />
+    <Content Include="Dsbd_css\assets\libs\fullcalendar\dist\locale\ko.js" />
+    <Content Include="Dsbd_css\assets\libs\fullcalendar\dist\locale\lb.js" />
+    <Content Include="Dsbd_css\assets\libs\fullcalendar\dist\locale\lt.js" />
+    <Content Include="Dsbd_css\assets\libs\fullcalendar\dist\locale\lv.js" />
+    <Content Include="Dsbd_css\assets\libs\fullcalendar\dist\locale\mk.js" />
+    <Content Include="Dsbd_css\assets\libs\fullcalendar\dist\locale\ms-my.js" />
+    <Content Include="Dsbd_css\assets\libs\fullcalendar\dist\locale\ms.js" />
+    <Content Include="Dsbd_css\assets\libs\fullcalendar\dist\locale\nb.js" />
+    <Content Include="Dsbd_css\assets\libs\fullcalendar\dist\locale\nl-be.js" />
+    <Content Include="Dsbd_css\assets\libs\fullcalendar\dist\locale\nl.js" />
+    <Content Include="Dsbd_css\assets\libs\fullcalendar\dist\locale\nn.js" />
+    <Content Include="Dsbd_css\assets\libs\fullcalendar\dist\locale\pl.js" />
+    <Content Include="Dsbd_css\assets\libs\fullcalendar\dist\locale\pt-br.js" />
+    <Content Include="Dsbd_css\assets\libs\fullcalendar\dist\locale\pt.js" />
+    <Content Include="Dsbd_css\assets\libs\fullcalendar\dist\locale\ro.js" />
+    <Content Include="Dsbd_css\assets\libs\fullcalendar\dist\locale\ru.js" />
+    <Content Include="Dsbd_css\assets\libs\fullcalendar\dist\locale\sk.js" />
+    <Content Include="Dsbd_css\assets\libs\fullcalendar\dist\locale\sl.js" />
+    <Content Include="Dsbd_css\assets\libs\fullcalendar\dist\locale\sq.js" />
+    <Content Include="Dsbd_css\assets\libs\fullcalendar\dist\locale\sr-cyrl.js" />
+    <Content Include="Dsbd_css\assets\libs\fullcalendar\dist\locale\sr.js" />
+    <Content Include="Dsbd_css\assets\libs\fullcalendar\dist\locale\sv.js" />
+    <Content Include="Dsbd_css\assets\libs\fullcalendar\dist\locale\th.js" />
+    <Content Include="Dsbd_css\assets\libs\fullcalendar\dist\locale\tr.js" />
+    <Content Include="Dsbd_css\assets\libs\fullcalendar\dist\locale\uk.js" />
+    <Content Include="Dsbd_css\assets\libs\fullcalendar\dist\locale\vi.js" />
+    <Content Include="Dsbd_css\assets\libs\fullcalendar\dist\locale\zh-cn.js" />
+    <Content Include="Dsbd_css\assets\libs\fullcalendar\dist\locale\zh-tw.js" />
+    <Content Include="Dsbd_css\assets\libs\inputmask\dist\inputmask\bindings\inputmask.binding.js" />
+    <Content Include="Dsbd_css\assets\libs\inputmask\dist\inputmask\dependencyLibs\inputmask.dependencyLib.jqlite.js" />
+    <Content Include="Dsbd_css\assets\libs\inputmask\dist\inputmask\dependencyLibs\inputmask.dependencyLib.jquery.js" />
+    <Content Include="Dsbd_css\assets\libs\inputmask\dist\inputmask\dependencyLibs\inputmask.dependencyLib.js" />
+    <Content Include="Dsbd_css\assets\libs\inputmask\dist\inputmask\global\document.js" />
+    <Content Include="Dsbd_css\assets\libs\inputmask\dist\inputmask\global\window.js" />
+    <Content Include="Dsbd_css\assets\libs\inputmask\dist\inputmask\inputmask.date.extensions.js" />
+    <Content Include="Dsbd_css\assets\libs\inputmask\dist\inputmask\inputmask.extensions.js" />
+    <Content Include="Dsbd_css\assets\libs\inputmask\dist\inputmask\inputmask.js" />
+    <Content Include="Dsbd_css\assets\libs\inputmask\dist\inputmask\inputmask.numeric.extensions.js" />
+    <Content Include="Dsbd_css\assets\libs\inputmask\dist\inputmask\inputmask.phone.extensions.js" />
+    <Content Include="Dsbd_css\assets\libs\inputmask\dist\inputmask\inputmask.regex.extensions.js" />
+    <Content Include="Dsbd_css\assets\libs\inputmask\dist\inputmask\jquery.inputmask.js" />
+    <Content Include="Dsbd_css\assets\libs\inputmask\dist\inputmask\phone-codes\phone-be.js" />
+    <Content Include="Dsbd_css\assets\libs\inputmask\dist\inputmask\phone-codes\phone-nl.js" />
+    <Content Include="Dsbd_css\assets\libs\inputmask\dist\inputmask\phone-codes\phone-ru.js" />
+    <Content Include="Dsbd_css\assets\libs\inputmask\dist\inputmask\phone-codes\phone-uk.js" />
+    <Content Include="Dsbd_css\assets\libs\inputmask\dist\inputmask\phone-codes\phone.js" />
+    <Content Include="Dsbd_css\assets\libs\inputmask\dist\jquery.inputmask.bundle.js" />
+    <Content Include="Dsbd_css\assets\libs\inputmask\dist\min\inputmask\bindings\inputmask.binding.min.js" />
+    <Content Include="Dsbd_css\assets\libs\inputmask\dist\min\inputmask\dependencyLibs\inputmask.dependencyLib.jqlite.min.js" />
+    <Content Include="Dsbd_css\assets\libs\inputmask\dist\min\inputmask\dependencyLibs\inputmask.dependencyLib.jquery.min.js" />
+    <Content Include="Dsbd_css\assets\libs\inputmask\dist\min\inputmask\dependencyLibs\inputmask.dependencyLib.min.js" />
+    <Content Include="Dsbd_css\assets\libs\inputmask\dist\min\inputmask\global\document.min.js" />
+    <Content Include="Dsbd_css\assets\libs\inputmask\dist\min\inputmask\global\window.min.js" />
+    <Content Include="Dsbd_css\assets\libs\inputmask\dist\min\inputmask\inputmask.date.extensions.min.js" />
+    <Content Include="Dsbd_css\assets\libs\inputmask\dist\min\inputmask\inputmask.extensions.min.js" />
+    <Content Include="Dsbd_css\assets\libs\inputmask\dist\min\inputmask\inputmask.min.js" />
+    <Content Include="Dsbd_css\assets\libs\inputmask\dist\min\inputmask\inputmask.numeric.extensions.min.js" />
+    <Content Include="Dsbd_css\assets\libs\inputmask\dist\min\inputmask\inputmask.phone.extensions.min.js" />
+    <Content Include="Dsbd_css\assets\libs\inputmask\dist\min\inputmask\inputmask.regex.extensions.min.js" />
+    <Content Include="Dsbd_css\assets\libs\inputmask\dist\min\inputmask\jquery.inputmask.min.js" />
+    <Content Include="Dsbd_css\assets\libs\inputmask\dist\min\inputmask\phone-codes\phone-be.min.js" />
+    <Content Include="Dsbd_css\assets\libs\inputmask\dist\min\inputmask\phone-codes\phone-nl.min.js" />
+    <Content Include="Dsbd_css\assets\libs\inputmask\dist\min\inputmask\phone-codes\phone-ru.min.js" />
+    <Content Include="Dsbd_css\assets\libs\inputmask\dist\min\inputmask\phone-codes\phone-uk.min.js" />
+    <Content Include="Dsbd_css\assets\libs\inputmask\dist\min\inputmask\phone-codes\phone.min.js" />
+    <Content Include="Dsbd_css\assets\libs\inputmask\dist\min\jquery.inputmask.bundle.min.js" />
+    <Content Include="Dsbd_css\assets\libs\jquery-asColorPicker\dist\css\asColorPicker.min.css" />
+    <Content Include="Dsbd_css\assets\libs\jquery-asColorPicker\dist\images\alpha.png" />
+    <Content Include="Dsbd_css\assets\libs\jquery-asColorPicker\dist\images\hue.png" />
+    <Content Include="Dsbd_css\assets\libs\jquery-asColorPicker\dist\images\saturation.png" />
+    <Content Include="Dsbd_css\assets\libs\jquery-asColorPicker\dist\images\transparent.png" />
+    <Content Include="Dsbd_css\assets\libs\jquery-asColorPicker\dist\jquery-asColorPicker.es.js" />
+    <Content Include="Dsbd_css\assets\libs\jquery-asColorPicker\dist\jquery-asColorPicker.min.js" />
+    <Content Include="Dsbd_css\assets\libs\jquery-asColor\dist\jquery-asColor.es.js" />
+    <Content Include="Dsbd_css\assets\libs\jquery-asColor\dist\jquery-asColor.js" />
+    <Content Include="Dsbd_css\assets\libs\jquery-asColor\dist\jquery-asColor.min.js" />
+    <Content Include="Dsbd_css\assets\libs\jquery-asColor\src\asColor.js" />
+    <Content Include="Dsbd_css\assets\libs\jquery-asColor\src\colorStrings.js" />
+    <Content Include="Dsbd_css\assets\libs\jquery-asColor\src\converter.js" />
+    <Content Include="Dsbd_css\assets\libs\jquery-asColor\src\defaults.js" />
+    <Content Include="Dsbd_css\assets\libs\jquery-asColor\src\info.js" />
+    <Content Include="Dsbd_css\assets\libs\jquery-asColor\src\main.js" />
+    <Content Include="Dsbd_css\assets\libs\jquery-asColor\src\names.js" />
+    <Content Include="Dsbd_css\assets\libs\jquery-asColor\src\util.js" />
+    <Content Include="Dsbd_css\assets\libs\jquery-asGradient\dist\jquery-asGradient.es.js" />
+    <Content Include="Dsbd_css\assets\libs\jquery-asGradient\dist\jquery-asGradient.js" />
+    <Content Include="Dsbd_css\assets\libs\jquery-asGradient\dist\jquery-asGradient.min.js" />
+    <Content Include="Dsbd_css\assets\libs\jquery-asGradient\src\asGradient.js" />
+    <Content Include="Dsbd_css\assets\libs\jquery-asGradient\src\colorStop.js" />
+    <Content Include="Dsbd_css\assets\libs\jquery-asGradient\src\defaults.js" />
+    <Content Include="Dsbd_css\assets\libs\jquery-asGradient\src\gradientString.js" />
+    <Content Include="Dsbd_css\assets\libs\jquery-asGradient\src\gradientTypes.js" />
+    <Content Include="Dsbd_css\assets\libs\jquery-asGradient\src\info.js" />
+    <Content Include="Dsbd_css\assets\libs\jquery-asGradient\src\keywordAngleMap.js" />
+    <Content Include="Dsbd_css\assets\libs\jquery-asGradient\src\main.js" />
+    <Content Include="Dsbd_css\assets\libs\jquery-asGradient\src\regExpStrings.js" />
+    <Content Include="Dsbd_css\assets\libs\jquery-asGradient\src\util.js" />
+    <Content Include="Dsbd_css\assets\libs\jquery-minicolors\index.html" />
+    <Content Include="Dsbd_css\assets\libs\jquery-minicolors\jquery.minicolors.css" />
+    <Content Include="Dsbd_css\assets\libs\jquery-minicolors\jquery.minicolors.min.js" />
+    <Content Include="Dsbd_css\assets\libs\jquery-minicolors\jquery.minicolors.png" />
+    <Content Include="Dsbd_css\assets\libs\jquery-minicolors\without-bootstrap.html" />
+    <Content Include="Dsbd_css\assets\libs\jquery-steps\build\jquery.steps.min.js" />
+    <Content Include="Dsbd_css\assets\libs\jquery-steps\jquery.steps.css" />
+    <Content Include="Dsbd_css\assets\libs\jquery-steps\lib\jquery-1.10.2.min.js" />
+    <Content Include="Dsbd_css\assets\libs\jquery-steps\lib\jquery-1.11.1.min.js" />
+    <Content Include="Dsbd_css\assets\libs\jquery-steps\lib\jquery-1.9.1.min.js" />
+    <Content Include="Dsbd_css\assets\libs\jquery-steps\lib\jquery.cookie-1.3.1.js" />
+    <Content Include="Dsbd_css\assets\libs\jquery-steps\lib\modernizr-2.6.2.min.js" />
+    <Content Include="Dsbd_css\assets\libs\jquery-steps\LICENSE.txt" />
+    <Content Include="Dsbd_css\assets\libs\jquery-steps\nuget\NuGet.exe" />
+    <Content Include="Dsbd_css\assets\libs\jquery-steps\steps.css" />
+    <Content Include="Dsbd_css\assets\libs\jquery-validation\dist\additional-methods.js" />
+    <Content Include="Dsbd_css\assets\libs\jquery-validation\dist\jquery.validate.min.js" />
+    <Content Include="Dsbd_css\assets\libs\jquery-validation\dist\localization\messages_ar.js" />
+    <Content Include="Dsbd_css\assets\libs\jquery-validation\dist\localization\messages_az.js" />
+    <Content Include="Dsbd_css\assets\libs\jquery-validation\dist\localization\messages_bg.js" />
+    <Content Include="Dsbd_css\assets\libs\jquery-validation\dist\localization\messages_bn_BD.js" />
+    <Content Include="Dsbd_css\assets\libs\jquery-validation\dist\localization\messages_ca.js" />
+    <Content Include="Dsbd_css\assets\libs\jquery-validation\dist\localization\messages_cs.js" />
+    <Content Include="Dsbd_css\assets\libs\jquery-validation\dist\localization\messages_da.js" />
+    <Content Include="Dsbd_css\assets\libs\jquery-validation\dist\localization\messages_de.js" />
+    <Content Include="Dsbd_css\assets\libs\jquery-validation\dist\localization\messages_el.js" />
+    <Content Include="Dsbd_css\assets\libs\jquery-validation\dist\localization\messages_es.js" />
+    <Content Include="Dsbd_css\assets\libs\jquery-validation\dist\localization\messages_es_AR.js" />
+    <Content Include="Dsbd_css\assets\libs\jquery-validation\dist\localization\messages_es_PE.js" />
+    <Content Include="Dsbd_css\assets\libs\jquery-validation\dist\localization\messages_et.js" />
+    <Content Include="Dsbd_css\assets\libs\jquery-validation\dist\localization\messages_eu.js" />
+    <Content Include="Dsbd_css\assets\libs\jquery-validation\dist\localization\messages_fa.js" />
+    <Content Include="Dsbd_css\assets\libs\jquery-validation\dist\localization\messages_fi.js" />
+    <Content Include="Dsbd_css\assets\libs\jquery-validation\dist\localization\messages_fr.js" />
+    <Content Include="Dsbd_css\assets\libs\jquery-validation\dist\localization\messages_ge.js" />
+    <Content Include="Dsbd_css\assets\libs\jquery-validation\dist\localization\messages_gl.js" />
+    <Content Include="Dsbd_css\assets\libs\jquery-validation\dist\localization\messages_he.js" />
+    <Content Include="Dsbd_css\assets\libs\jquery-validation\dist\localization\messages_hr.js" />
+    <Content Include="Dsbd_css\assets\libs\jquery-validation\dist\localization\messages_hu.js" />
+    <Content Include="Dsbd_css\assets\libs\jquery-validation\dist\localization\messages_hy_AM.js" />
+    <Content Include="Dsbd_css\assets\libs\jquery-validation\dist\localization\messages_id.js" />
+    <Content Include="Dsbd_css\assets\libs\jquery-validation\dist\localization\messages_is.js" />
+    <Content Include="Dsbd_css\assets\libs\jquery-validation\dist\localization\messages_it.js" />
+    <Content Include="Dsbd_css\assets\libs\jquery-validation\dist\localization\messages_ja.js" />
+    <Content Include="Dsbd_css\assets\libs\jquery-validation\dist\localization\messages_ka.js" />
+    <Content Include="Dsbd_css\assets\libs\jquery-validation\dist\localization\messages_kk.js" />
+    <Content Include="Dsbd_css\assets\libs\jquery-validation\dist\localization\messages_ko.js" />
+    <Content Include="Dsbd_css\assets\libs\jquery-validation\dist\localization\messages_lt.js" />
+    <Content Include="Dsbd_css\assets\libs\jquery-validation\dist\localization\messages_lv.js" />
+    <Content Include="Dsbd_css\assets\libs\jquery-validation\dist\localization\messages_mk.js" />
+    <Content Include="Dsbd_css\assets\libs\jquery-validation\dist\localization\messages_my.js" />
+    <Content Include="Dsbd_css\assets\libs\jquery-validation\dist\localization\messages_nl.js" />
+    <Content Include="Dsbd_css\assets\libs\jquery-validation\dist\localization\messages_no.js" />
+    <Content Include="Dsbd_css\assets\libs\jquery-validation\dist\localization\messages_pl.js" />
+    <Content Include="Dsbd_css\assets\libs\jquery-validation\dist\localization\messages_pt_BR.js" />
+    <Content Include="Dsbd_css\assets\libs\jquery-validation\dist\localization\messages_pt_PT.js" />
+    <Content Include="Dsbd_css\assets\libs\jquery-validation\dist\localization\messages_ro.js" />
+    <Content Include="Dsbd_css\assets\libs\jquery-validation\dist\localization\messages_ru.js" />
+    <Content Include="Dsbd_css\assets\libs\jquery-validation\dist\localization\messages_sd.js" />
+    <Content Include="Dsbd_css\assets\libs\jquery-validation\dist\localization\messages_si.js" />
+    <Content Include="Dsbd_css\assets\libs\jquery-validation\dist\localization\messages_sk.js" />
+    <Content Include="Dsbd_css\assets\libs\jquery-validation\dist\localization\messages_sl.js" />
+    <Content Include="Dsbd_css\assets\libs\jquery-validation\dist\localization\messages_sr.js" />
+    <Content Include="Dsbd_css\assets\libs\jquery-validation\dist\localization\messages_sr_lat.js" />
+    <Content Include="Dsbd_css\assets\libs\jquery-validation\dist\localization\messages_sv.js" />
+    <Content Include="Dsbd_css\assets\libs\jquery-validation\dist\localization\messages_th.js" />
+    <Content Include="Dsbd_css\assets\libs\jquery-validation\dist\localization\messages_tj.js" />
+    <Content Include="Dsbd_css\assets\libs\jquery-validation\dist\localization\messages_tr.js" />
+    <Content Include="Dsbd_css\assets\libs\jquery-validation\dist\localization\messages_uk.js" />
+    <Content Include="Dsbd_css\assets\libs\jquery-validation\dist\localization\messages_ur.js" />
+    <Content Include="Dsbd_css\assets\libs\jquery-validation\dist\localization\messages_vi.js" />
+    <Content Include="Dsbd_css\assets\libs\jquery-validation\dist\localization\messages_zh.js" />
+    <Content Include="Dsbd_css\assets\libs\jquery-validation\dist\localization\messages_zh_TW.js" />
+    <Content Include="Dsbd_css\assets\libs\jquery-validation\dist\localization\methods_de.js" />
+    <Content Include="Dsbd_css\assets\libs\jquery-validation\dist\localization\methods_es_CL.js" />
+    <Content Include="Dsbd_css\assets\libs\jquery-validation\dist\localization\methods_fi.js" />
+    <Content Include="Dsbd_css\assets\libs\jquery-validation\dist\localization\methods_nl.js" />
+    <Content Include="Dsbd_css\assets\libs\jquery-validation\dist\localization\methods_pt.js" />
+    <Content Include="Dsbd_css\assets\libs\jquery.flot.tooltip\js\jquery.flot.tooltip.min.js" />
+    <Content Include="Dsbd_css\assets\libs\jquery.flot.tooltip\js\jquery.flot.tooltip.source.js" />
+    <Content Include="Dsbd_css\assets\libs\jquery\dist\core.js" />
+    <Content Include="Dsbd_css\assets\libs\jquery\dist\jquery.min.js" />
+    <Content Include="Dsbd_css\assets\libs\jquery\dist\jquery.slim.min.js" />
+    <Content Include="Dsbd_css\assets\libs\magnific-popup\animation.css" />
+    <Content Include="Dsbd_css\assets\libs\magnific-popup\dist\jquery.magnific-popup.min.js" />
+    <Content Include="Dsbd_css\assets\libs\magnific-popup\dist\magnific-popup.css" />
+    <Content Include="Dsbd_css\assets\libs\magnific-popup\meg.init.js" />
+    <Content Include="Dsbd_css\assets\libs\moment\ender.js" />
+    <Content Include="Dsbd_css\assets\libs\moment\locale\af.js" />
+    <Content Include="Dsbd_css\assets\libs\moment\locale\ar-dz.js" />
+    <Content Include="Dsbd_css\assets\libs\moment\locale\ar-kw.js" />
+    <Content Include="Dsbd_css\assets\libs\moment\locale\ar-ly.js" />
+    <Content Include="Dsbd_css\assets\libs\moment\locale\ar-ma.js" />
+    <Content Include="Dsbd_css\assets\libs\moment\locale\ar-sa.js" />
+    <Content Include="Dsbd_css\assets\libs\moment\locale\ar-tn.js" />
+    <Content Include="Dsbd_css\assets\libs\moment\locale\ar.js" />
+    <Content Include="Dsbd_css\assets\libs\moment\locale\az.js" />
+    <Content Include="Dsbd_css\assets\libs\moment\locale\be.js" />
+    <Content Include="Dsbd_css\assets\libs\moment\locale\bg.js" />
+    <Content Include="Dsbd_css\assets\libs\moment\locale\bm.js" />
+    <Content Include="Dsbd_css\assets\libs\moment\locale\bn.js" />
+    <Content Include="Dsbd_css\assets\libs\moment\locale\bo.js" />
+    <Content Include="Dsbd_css\assets\libs\moment\locale\br.js" />
+    <Content Include="Dsbd_css\assets\libs\moment\locale\bs.js" />
+    <Content Include="Dsbd_css\assets\libs\moment\locale\ca.js" />
+    <Content Include="Dsbd_css\assets\libs\moment\locale\cs.js" />
+    <Content Include="Dsbd_css\assets\libs\moment\locale\cv.js" />
+    <Content Include="Dsbd_css\assets\libs\moment\locale\cy.js" />
+    <Content Include="Dsbd_css\assets\libs\moment\locale\da.js" />
+    <Content Include="Dsbd_css\assets\libs\moment\locale\de-at.js" />
+    <Content Include="Dsbd_css\assets\libs\moment\locale\de-ch.js" />
+    <Content Include="Dsbd_css\assets\libs\moment\locale\de.js" />
+    <Content Include="Dsbd_css\assets\libs\moment\locale\dv.js" />
+    <Content Include="Dsbd_css\assets\libs\moment\locale\el.js" />
+    <Content Include="Dsbd_css\assets\libs\moment\locale\en-au.js" />
+    <Content Include="Dsbd_css\assets\libs\moment\locale\en-ca.js" />
+    <Content Include="Dsbd_css\assets\libs\moment\locale\en-gb.js" />
+    <Content Include="Dsbd_css\assets\libs\moment\locale\en-ie.js" />
+    <Content Include="Dsbd_css\assets\libs\moment\locale\en-il.js" />
+    <Content Include="Dsbd_css\assets\libs\moment\locale\en-nz.js" />
+    <Content Include="Dsbd_css\assets\libs\moment\locale\eo.js" />
+    <Content Include="Dsbd_css\assets\libs\moment\locale\es-do.js" />
+    <Content Include="Dsbd_css\assets\libs\moment\locale\es-us.js" />
+    <Content Include="Dsbd_css\assets\libs\moment\locale\es.js" />
+    <Content Include="Dsbd_css\assets\libs\moment\locale\et.js" />
+    <Content Include="Dsbd_css\assets\libs\moment\locale\eu.js" />
+    <Content Include="Dsbd_css\assets\libs\moment\locale\fa.js" />
+    <Content Include="Dsbd_css\assets\libs\moment\locale\fi.js" />
+    <Content Include="Dsbd_css\assets\libs\moment\locale\fo.js" />
+    <Content Include="Dsbd_css\assets\libs\moment\locale\fr-ca.js" />
+    <Content Include="Dsbd_css\assets\libs\moment\locale\fr-ch.js" />
+    <Content Include="Dsbd_css\assets\libs\moment\locale\fr.js" />
+    <Content Include="Dsbd_css\assets\libs\moment\locale\fy.js" />
+    <Content Include="Dsbd_css\assets\libs\moment\locale\gd.js" />
+    <Content Include="Dsbd_css\assets\libs\moment\locale\gl.js" />
+    <Content Include="Dsbd_css\assets\libs\moment\locale\gom-latn.js" />
+    <Content Include="Dsbd_css\assets\libs\moment\locale\gu.js" />
+    <Content Include="Dsbd_css\assets\libs\moment\locale\he.js" />
+    <Content Include="Dsbd_css\assets\libs\moment\locale\hi.js" />
+    <Content Include="Dsbd_css\assets\libs\moment\locale\hr.js" />
+    <Content Include="Dsbd_css\assets\libs\moment\locale\hu.js" />
+    <Content Include="Dsbd_css\assets\libs\moment\locale\hy-am.js" />
+    <Content Include="Dsbd_css\assets\libs\moment\locale\id.js" />
+    <Content Include="Dsbd_css\assets\libs\moment\locale\is.js" />
+    <Content Include="Dsbd_css\assets\libs\moment\locale\it.js" />
+    <Content Include="Dsbd_css\assets\libs\moment\locale\ja.js" />
+    <Content Include="Dsbd_css\assets\libs\moment\locale\jv.js" />
+    <Content Include="Dsbd_css\assets\libs\moment\locale\ka.js" />
+    <Content Include="Dsbd_css\assets\libs\moment\locale\kk.js" />
+    <Content Include="Dsbd_css\assets\libs\moment\locale\km.js" />
+    <Content Include="Dsbd_css\assets\libs\moment\locale\kn.js" />
+    <Content Include="Dsbd_css\assets\libs\moment\locale\ko.js" />
+    <Content Include="Dsbd_css\assets\libs\moment\locale\ky.js" />
+    <Content Include="Dsbd_css\assets\libs\moment\locale\lb.js" />
+    <Content Include="Dsbd_css\assets\libs\moment\locale\lo.js" />
+    <Content Include="Dsbd_css\assets\libs\moment\locale\lt.js" />
+    <Content Include="Dsbd_css\assets\libs\moment\locale\lv.js" />
+    <Content Include="Dsbd_css\assets\libs\moment\locale\me.js" />
+    <Content Include="Dsbd_css\assets\libs\moment\locale\mi.js" />
+    <Content Include="Dsbd_css\assets\libs\moment\locale\mk.js" />
+    <Content Include="Dsbd_css\assets\libs\moment\locale\ml.js" />
+    <Content Include="Dsbd_css\assets\libs\moment\locale\mn.js" />
+    <Content Include="Dsbd_css\assets\libs\moment\locale\mr.js" />
+    <Content Include="Dsbd_css\assets\libs\moment\locale\ms-my.js" />
+    <Content Include="Dsbd_css\assets\libs\moment\locale\ms.js" />
+    <Content Include="Dsbd_css\assets\libs\moment\locale\mt.js" />
+    <Content Include="Dsbd_css\assets\libs\moment\locale\my.js" />
+    <Content Include="Dsbd_css\assets\libs\moment\locale\nb.js" />
+    <Content Include="Dsbd_css\assets\libs\moment\locale\ne.js" />
+    <Content Include="Dsbd_css\assets\libs\moment\locale\nl-be.js" />
+    <Content Include="Dsbd_css\assets\libs\moment\locale\nl.js" />
+    <Content Include="Dsbd_css\assets\libs\moment\locale\nn.js" />
+    <Content Include="Dsbd_css\assets\libs\moment\locale\pa-in.js" />
+    <Content Include="Dsbd_css\assets\libs\moment\locale\pl.js" />
+    <Content Include="Dsbd_css\assets\libs\moment\locale\pt-br.js" />
+    <Content Include="Dsbd_css\assets\libs\moment\locale\pt.js" />
+    <Content Include="Dsbd_css\assets\libs\moment\locale\ro.js" />
+    <Content Include="Dsbd_css\assets\libs\moment\locale\ru.js" />
+    <Content Include="Dsbd_css\assets\libs\moment\locale\sd.js" />
+    <Content Include="Dsbd_css\assets\libs\moment\locale\se.js" />
+    <Content Include="Dsbd_css\assets\libs\moment\locale\si.js" />
+    <Content Include="Dsbd_css\assets\libs\moment\locale\sk.js" />
+    <Content Include="Dsbd_css\assets\libs\moment\locale\sl.js" />
+    <Content Include="Dsbd_css\assets\libs\moment\locale\sq.js" />
+    <Content Include="Dsbd_css\assets\libs\moment\locale\sr-cyrl.js" />
+    <Content Include="Dsbd_css\assets\libs\moment\locale\sr.js" />
+    <Content Include="Dsbd_css\assets\libs\moment\locale\ss.js" />
+    <Content Include="Dsbd_css\assets\libs\moment\locale\sv.js" />
+    <Content Include="Dsbd_css\assets\libs\moment\locale\sw.js" />
+    <Content Include="Dsbd_css\assets\libs\moment\locale\ta.js" />
+    <Content Include="Dsbd_css\assets\libs\moment\locale\te.js" />
+    <Content Include="Dsbd_css\assets\libs\moment\locale\tet.js" />
+    <Content Include="Dsbd_css\assets\libs\moment\locale\tg.js" />
+    <Content Include="Dsbd_css\assets\libs\moment\locale\th.js" />
+    <Content Include="Dsbd_css\assets\libs\moment\locale\tl-ph.js" />
+    <Content Include="Dsbd_css\assets\libs\moment\locale\tlh.js" />
+    <Content Include="Dsbd_css\assets\libs\moment\locale\tr.js" />
+    <Content Include="Dsbd_css\assets\libs\moment\locale\tzl.js" />
+    <Content Include="Dsbd_css\assets\libs\moment\locale\tzm-latn.js" />
+    <Content Include="Dsbd_css\assets\libs\moment\locale\tzm.js" />
+    <Content Include="Dsbd_css\assets\libs\moment\locale\ug-cn.js" />
+    <Content Include="Dsbd_css\assets\libs\moment\locale\uk.js" />
+    <Content Include="Dsbd_css\assets\libs\moment\locale\ur.js" />
+    <Content Include="Dsbd_css\assets\libs\moment\locale\uz-latn.js" />
+    <Content Include="Dsbd_css\assets\libs\moment\locale\uz.js" />
+    <Content Include="Dsbd_css\assets\libs\moment\locale\vi.js" />
+    <Content Include="Dsbd_css\assets\libs\moment\locale\x-pseudo.js" />
+    <Content Include="Dsbd_css\assets\libs\moment\locale\yo.js" />
+    <Content Include="Dsbd_css\assets\libs\moment\locale\zh-cn.js" />
+    <Content Include="Dsbd_css\assets\libs\moment\locale\zh-hk.js" />
+    <Content Include="Dsbd_css\assets\libs\moment\locale\zh-tw.js" />
+    <Content Include="Dsbd_css\assets\libs\moment\min\locales.min.js" />
+    <Content Include="Dsbd_css\assets\libs\moment\min\moment-with-locales.min.js" />
+    <Content Include="Dsbd_css\assets\libs\moment\min\moment.min.js" />
+    <Content Include="Dsbd_css\assets\libs\moment\moment.js" />
+    <Content Include="Dsbd_css\assets\libs\moment\package.js" />
+    <Content Include="Dsbd_css\assets\libs\perfect-scrollbar\dist\css\perfect-scrollbar.min.css" />
+    <Content Include="Dsbd_css\assets\libs\perfect-scrollbar\dist\js\perfect-scrollbar.jquery.min.js" />
+    <Content Include="Dsbd_css\assets\libs\perfect-scrollbar\dist\js\perfect-scrollbar.min.js" />
+    <Content Include="Dsbd_css\assets\libs\perfect-scrollbar\dist\perfect-scrollbar.common.js" />
+    <Content Include="Dsbd_css\assets\libs\perfect-scrollbar\dist\perfect-scrollbar.esm.js" />
+    <Content Include="Dsbd_css\assets\libs\perfect-scrollbar\dist\perfect-scrollbar.jquery.min.js" />
+    <Content Include="Dsbd_css\assets\libs\perfect-scrollbar\dist\perfect-scrollbar.min.js" />
+    <Content Include="Dsbd_css\assets\libs\popper.js\dist\esm\popper-utils.min.js" />
+    <Content Include="Dsbd_css\assets\libs\popper.js\dist\esm\popper.min.js" />
+    <Content Include="Dsbd_css\assets\libs\popper.js\dist\popper-utils.min.js" />
+    <Content Include="Dsbd_css\assets\libs\popper.js\dist\popper.min.js" />
+    <Content Include="Dsbd_css\assets\libs\popper.js\dist\umd\popper-utils.min.js" />
+    <Content Include="Dsbd_css\assets\libs\popper.js\dist\umd\popper.min.js" />
+    <Content Include="Dsbd_css\assets\libs\quill\dist\quill.bubble.css" />
+    <Content Include="Dsbd_css\assets\libs\quill\dist\quill.core.css" />
+    <Content Include="Dsbd_css\assets\libs\quill\dist\quill.core.js" />
+    <Content Include="Dsbd_css\assets\libs\quill\dist\quill.min.js" />
+    <Content Include="Dsbd_css\assets\libs\quill\dist\quill.snow.css" />
+    <Content Include="Dsbd_css\assets\libs\select2\dist\css\select2.min.css" />
+    <Content Include="Dsbd_css\assets\libs\select2\dist\js\i18n\af.js" />
+    <Content Include="Dsbd_css\assets\libs\select2\dist\js\i18n\ar.js" />
+    <Content Include="Dsbd_css\assets\libs\select2\dist\js\i18n\az.js" />
+    <Content Include="Dsbd_css\assets\libs\select2\dist\js\i18n\bg.js" />
+    <Content Include="Dsbd_css\assets\libs\select2\dist\js\i18n\bs.js" />
+    <Content Include="Dsbd_css\assets\libs\select2\dist\js\i18n\build.txt" />
+    <Content Include="Dsbd_css\assets\libs\select2\dist\js\i18n\ca.js" />
+    <Content Include="Dsbd_css\assets\libs\select2\dist\js\i18n\cs.js" />
+    <Content Include="Dsbd_css\assets\libs\select2\dist\js\i18n\da.js" />
+    <Content Include="Dsbd_css\assets\libs\select2\dist\js\i18n\de.js" />
+    <Content Include="Dsbd_css\assets\libs\select2\dist\js\i18n\dsb.js" />
+    <Content Include="Dsbd_css\assets\libs\select2\dist\js\i18n\el.js" />
+    <Content Include="Dsbd_css\assets\libs\select2\dist\js\i18n\en.js" />
+    <Content Include="Dsbd_css\assets\libs\select2\dist\js\i18n\es.js" />
+    <Content Include="Dsbd_css\assets\libs\select2\dist\js\i18n\et.js" />
+    <Content Include="Dsbd_css\assets\libs\select2\dist\js\i18n\eu.js" />
+    <Content Include="Dsbd_css\assets\libs\select2\dist\js\i18n\fa.js" />
+    <Content Include="Dsbd_css\assets\libs\select2\dist\js\i18n\fi.js" />
+    <Content Include="Dsbd_css\assets\libs\select2\dist\js\i18n\fr.js" />
+    <Content Include="Dsbd_css\assets\libs\select2\dist\js\i18n\gl.js" />
+    <Content Include="Dsbd_css\assets\libs\select2\dist\js\i18n\he.js" />
+    <Content Include="Dsbd_css\assets\libs\select2\dist\js\i18n\hi.js" />
+    <Content Include="Dsbd_css\assets\libs\select2\dist\js\i18n\hr.js" />
+    <Content Include="Dsbd_css\assets\libs\select2\dist\js\i18n\hsb.js" />
+    <Content Include="Dsbd_css\assets\libs\select2\dist\js\i18n\hu.js" />
+    <Content Include="Dsbd_css\assets\libs\select2\dist\js\i18n\hy.js" />
+    <Content Include="Dsbd_css\assets\libs\select2\dist\js\i18n\id.js" />
+    <Content Include="Dsbd_css\assets\libs\select2\dist\js\i18n\is.js" />
+    <Content Include="Dsbd_css\assets\libs\select2\dist\js\i18n\it.js" />
+    <Content Include="Dsbd_css\assets\libs\select2\dist\js\i18n\ja.js" />
+    <Content Include="Dsbd_css\assets\libs\select2\dist\js\i18n\km.js" />
+    <Content Include="Dsbd_css\assets\libs\select2\dist\js\i18n\ko.js" />
+    <Content Include="Dsbd_css\assets\libs\select2\dist\js\i18n\lt.js" />
+    <Content Include="Dsbd_css\assets\libs\select2\dist\js\i18n\lv.js" />
+    <Content Include="Dsbd_css\assets\libs\select2\dist\js\i18n\mk.js" />
+    <Content Include="Dsbd_css\assets\libs\select2\dist\js\i18n\ms.js" />
+    <Content Include="Dsbd_css\assets\libs\select2\dist\js\i18n\nb.js" />
+    <Content Include="Dsbd_css\assets\libs\select2\dist\js\i18n\nl.js" />
+    <Content Include="Dsbd_css\assets\libs\select2\dist\js\i18n\pl.js" />
+    <Content Include="Dsbd_css\assets\libs\select2\dist\js\i18n\ps.js" />
+    <Content Include="Dsbd_css\assets\libs\select2\dist\js\i18n\pt-BR.js" />
+    <Content Include="Dsbd_css\assets\libs\select2\dist\js\i18n\pt.js" />
+    <Content Include="Dsbd_css\assets\libs\select2\dist\js\i18n\ro.js" />
+    <Content Include="Dsbd_css\assets\libs\select2\dist\js\i18n\ru.js" />
+    <Content Include="Dsbd_css\assets\libs\select2\dist\js\i18n\sk.js" />
+    <Content Include="Dsbd_css\assets\libs\select2\dist\js\i18n\sl.js" />
+    <Content Include="Dsbd_css\assets\libs\select2\dist\js\i18n\sr-Cyrl.js" />
+    <Content Include="Dsbd_css\assets\libs\select2\dist\js\i18n\sr.js" />
+    <Content Include="Dsbd_css\assets\libs\select2\dist\js\i18n\sv.js" />
+    <Content Include="Dsbd_css\assets\libs\select2\dist\js\i18n\th.js" />
+    <Content Include="Dsbd_css\assets\libs\select2\dist\js\i18n\tk.js" />
+    <Content Include="Dsbd_css\assets\libs\select2\dist\js\i18n\tr.js" />
+    <Content Include="Dsbd_css\assets\libs\select2\dist\js\i18n\uk.js" />
+    <Content Include="Dsbd_css\assets\libs\select2\dist\js\i18n\vi.js" />
+    <Content Include="Dsbd_css\assets\libs\select2\dist\js\i18n\zh-CN.js" />
+    <Content Include="Dsbd_css\assets\libs\select2\dist\js\i18n\zh-TW.js" />
+    <Content Include="Dsbd_css\assets\libs\select2\dist\js\select2.full.min.js" />
+    <Content Include="Dsbd_css\assets\libs\select2\dist\js\select2.min.js" />
+    <Content Include="Dsbd_css\assets\libs\toastr\build\toastr.min.css" />
+    <Content Include="Dsbd_css\assets\libs\toastr\build\toastr.min.js" />
+    <Content Include="Dsbd_css\assets\libs\toastr\toastr-icon.png" />
+    <Content Include="Dsbd_css\assets\libs\toastr\toastr.js" />
+    <Content Include="Dsbd_css\Balance_Sheet.aspx" />
+    <Content Include="Dsbd_css\Bank_Reconciliation_GridView.aspx" />
+    <Content Include="Dsbd_css\Bank_Reconciliation.aspx" />
+    <Content Include="Dsbd_css\dist\css\icons\font-awesome\css\fa-brands.css" />
+    <Content Include="Dsbd_css\dist\css\icons\font-awesome\css\fa-brands.min.css" />
+    <Content Include="Dsbd_css\dist\css\icons\font-awesome\css\fa-regular.css" />
+    <Content Include="Dsbd_css\dist\css\icons\font-awesome\css\fa-regular.min.css" />
+    <Content Include="Dsbd_css\dist\css\icons\font-awesome\css\fa-solid.css" />
+    <Content Include="Dsbd_css\dist\css\icons\font-awesome\css\fa-solid.min.css" />
+    <Content Include="Dsbd_css\dist\css\icons\font-awesome\css\fontawesome-all.css" />
+    <Content Include="Dsbd_css\dist\css\icons\font-awesome\css\fontawesome-all.min.css" />
+    <Content Include="Dsbd_css\dist\css\icons\font-awesome\css\fontawesome.css" />
+    <Content Include="Dsbd_css\dist\css\icons\font-awesome\css\fontawesome.min.css" />
+    <Content Include="Dsbd_css\dist\css\icons\font-awesome\webfonts\fa-brands-400.svg" />
+    <Content Include="Dsbd_css\dist\css\icons\font-awesome\webfonts\fa-regular-400.svg" />
+    <Content Include="Dsbd_css\dist\css\icons\font-awesome\webfonts\fa-solid-900.svg" />
+    <Content Include="Dsbd_css\dist\css\icons\material-design-iconic-font\css\material-design-iconic-font.css" />
+    <Content Include="Dsbd_css\dist\css\icons\material-design-iconic-font\css\material-design-iconic-font.min.css" />
+    <Content Include="Dsbd_css\dist\css\icons\material-design-iconic-font\css\materialdesignicons.min.css" />
+    <Content Include="Dsbd_css\dist\css\icons\material-design-iconic-font\fonts\Material-Design-Iconic-Font.svg" />
+    <Content Include="Dsbd_css\dist\css\icons\material-design-iconic-font\fonts\materialdesignicons-webfont.svg" />
+    <Content Include="Dsbd_css\dist\css\icons\themify-icons\fonts\themify.svg" />
+    <Content Include="Dsbd_css\dist\css\icons\themify-icons\ie7\ie7.css" />
+    <Content Include="Dsbd_css\dist\css\icons\themify-icons\ie7\ie7.js" />
+    <Content Include="Dsbd_css\dist\css\icons\themify-icons\themify-icons.css" />
+    <Content Include="Dsbd_css\dist\css\icons\weather-icons\css\weather-icons-core.css" />
+    <Content Include="Dsbd_css\dist\css\icons\weather-icons\css\weather-icons-variables.css" />
+    <Content Include="Dsbd_css\dist\css\icons\weather-icons\css\weather-icons-wind.css" />
+    <Content Include="Dsbd_css\dist\css\icons\weather-icons\css\weather-icons-wind.min.css" />
+    <Content Include="Dsbd_css\dist\css\icons\weather-icons\css\weather-icons.css" />
+    <Content Include="Dsbd_css\dist\css\icons\weather-icons\css\weather-icons.min.css" />
+    <Content Include="Dsbd_css\dist\css\icons\weather-icons\fonts\weathericons-regular-webfont.svg" />
+    <Content Include="Dsbd_css\dist\css\icons\weather-icons\less\css\variables-beaufort.css" />
+    <Content Include="Dsbd_css\dist\css\icons\weather-icons\less\css\variables-day.css" />
+    <Content Include="Dsbd_css\dist\css\icons\weather-icons\less\css\variables-direction.css" />
+    <Content Include="Dsbd_css\dist\css\icons\weather-icons\less\css\variables-misc.css" />
+    <Content Include="Dsbd_css\dist\css\icons\weather-icons\less\css\variables-moon.css" />
+    <Content Include="Dsbd_css\dist\css\icons\weather-icons\less\css\variables-neutral.css" />
+    <Content Include="Dsbd_css\dist\css\icons\weather-icons\less\css\variables-night.css" />
+    <Content Include="Dsbd_css\dist\css\icons\weather-icons\less\css\variables-time.css" />
+    <Content Include="Dsbd_css\dist\css\icons\weather-icons\less\css\variables-wind-names.css" />
+    <Content Include="Dsbd_css\dist\css\style.css" />
+    <Content Include="Dsbd_css\dist\css\style.min.css" />
+    <Content Include="Dsbd_css\dist\js\app-style-switcher.js" />
+    <Content Include="Dsbd_css\dist\js\custom.js" />
+    <Content Include="Dsbd_css\dist\js\custom.min.js" />
+    <Content Include="Dsbd_css\dist\js\jquery-ui.min.js" />
+    <Content Include="Dsbd_css\dist\js\jquery.ui.touch-punch-improved.js" />
+    <Content Include="Dsbd_css\dist\js\pages\calendar\cal-init.js" />
+    <Content Include="Dsbd_css\dist\js\pages\chart\chart-init.js" />
+    <Content Include="Dsbd_css\dist\js\pages\chart\chart-page-init.js" />
+    <Content Include="Dsbd_css\dist\js\pages\dashboards\dashboard1.js" />
+    <Content Include="Dsbd_css\dist\js\pages\maps\map-google.init.js" />
+    <Content Include="Dsbd_css\dist\js\pages\mask\mask.init.js" />
+    <Content Include="Dsbd_css\dist\js\pages\sparkline\jquery.charts-sparkline.js" />
+    <Content Include="Dsbd_css\dist\js\sidebarmenu.js" />
+    <Content Include="Dsbd_css\dist\js\waves.js" />
+    <Content Include="Dsbd_css\Dsbd_Account_MS.aspx" />
+    <Content Include="Dsbd_css\Expenses.aspx" />
+    <Content Include="Dsbd_css\GridView_Service.aspx" />
+    <Content Include="Dsbd_css\Income.aspx" />
+    <Content Include="Dsbd_css\Invoice.aspx" />
+    <Content Include="Dsbd_css\Payment_In.aspx" />
+    <Content Include="Dsbd_css\Payment_Out.aspx" />
+    <Content Include="Dsbd_css\POPUP.aspx" />
+    <Content Include="Dsbd_css\Profit.aspx" />
+    <Content Include="Dsbd_css\Purchase.aspx" />
+    <Content Include="Dsbd_css\Purchase_GridView.aspx" />
+    <Content Include="Dsbd_css\SaleReturn.aspx" />
+    <Content Include="Dsbd_css\Sales_Invoice.aspx" />
+    <Content Include="Dsbd_css\Sales_Invoice_GridView.aspx" />
+    <Content Include="Dsbd_css\service.aspx" />
+    <Content Include="Dsbd_css\Settings.aspx" />
+    <Content Include="Dsbd_css\Stock_GridView.aspx" />
+    <Content Include="Dsbd_css\Transaction.aspx" />
+    <Content Include="images\amspic.jpg" />
+    <Content Include="images\back.png" />
+    <Content Include="images\bg.jpg" />
+    <Content Include="images\pic01.jpg" />
+    <Content Include="images\pic02.jpg" />
+    <Content Include="images\pic03.jpg" />
+    <Content Include="images\pic04.jpg" />
+    <Content Include="images\pic05.jpg" />
+    <Content Include="images\pic06.jpg" />
+    <Content Include="images\pic07.jpg" />
+    <Content Include="images\pic08.jpg" />
+    <Content Include="Index\assets\css\style.css" />
+    <Content Include="Index\assets\img\about.png" />
+    <Content Include="Index\assets\img\account-management-software.png" />
+    <Content Include="Index\assets\img\add-item.png" />
+    <Content Include="Index\assets\img\apple-touch-icon.png" />
+    <Content Include="Index\assets\img\balance-sheet.png" />
+    <Content Include="Index\assets\img\bank.png" />
+    <Content Include="Index\assets\img\cycle-counting.png" />
+    <Content Include="Index\assets\img\download.png" />
+    <Content Include="Index\assets\img\download1.jpeg" />
+    <Content Include="Index\assets\img\favicon.png" />
+    <Content Include="Index\assets\img\hero-img.png" />
+    <Content Include="Index\assets\img\portfolio\portfolio-1.jpg" />
+    <Content Include="Index\assets\img\portfolio\portfolio-2.jpg" />
+    <Content Include="Index\assets\img\portfolio\portfolio-3.jpg" />
+    <Content Include="Index\assets\img\portfolio\portfolio-4.jpg" />
+    <Content Include="Index\assets\img\portfolio\portfolio-5.jpg" />
+    <Content Include="Index\assets\img\portfolio\portfolio-6.jpg" />
+    <Content Include="Index\assets\img\portfolio\portfolio-7.jpg" />
+    <Content Include="Index\assets\img\portfolio\portfolio-8.jpg" />
+    <Content Include="Index\assets\img\portfolio\portfolio-9.jpg" />
+    <Content Include="Index\assets\img\portfolio\portfolio-details-1.jpg" />
+    <Content Include="Index\assets\img\portfolio\portfolio-details-2.jpg" />
+    <Content Include="Index\assets\img\portfolio\portfolio-details-3.jpg" />
+    <Content Include="Index\assets\img\risk.png" />
+    <Content Include="Index\assets\img\spending %281%29.png" />
+    <Content Include="Index\assets\img\team\team-1.jpg" />
+    <Content Include="Index\assets\img\team\team-2.jpg" />
+    <Content Include="Index\assets\img\team\team-3.jpg" />
+    <Content Include="Index\assets\img\testimonials\testimonials-1.jpg" />
+    <Content Include="Index\assets\img\testimonials\testimonials-2.jpg" />
+    <Content Include="Index\assets\img\testimonials\testimonials-3.jpg" />
+    <Content Include="Index\assets\img\testimonials\testimonials-4.jpg" />
+    <Content Include="Index\assets\img\testimonials\testimonials-5.jpg" />
+    <Content Include="Index\assets\js\main.js" />
+    <Content Include="Index\assets\scss\Readme.txt" />
+    <Content Include="Index\assets\vendor\bootstrap-icons\bootstrap-icons.css" />
+    <Content Include="Index\assets\vendor\bootstrap-icons\bootstrap-icons.min.css" />
+    <Content Include="Index\assets\vendor\bootstrap\css\bootstrap-grid.css" />
+    <Content Include="Index\assets\vendor\bootstrap\css\bootstrap-grid.min.css" />
+    <Content Include="Index\assets\vendor\bootstrap\css\bootstrap-grid.rtl.css" />
+    <Content Include="Index\assets\vendor\bootstrap\css\bootstrap-grid.rtl.min.css" />
+    <Content Include="Index\assets\vendor\bootstrap\css\bootstrap-reboot.css" />
+    <Content Include="Index\assets\vendor\bootstrap\css\bootstrap-reboot.min.css" />
+    <Content Include="Index\assets\vendor\bootstrap\css\bootstrap-reboot.rtl.css" />
+    <Content Include="Index\assets\vendor\bootstrap\css\bootstrap-reboot.rtl.min.css" />
+    <Content Include="Index\assets\vendor\bootstrap\css\bootstrap-utilities.css" />
+    <Content Include="Index\assets\vendor\bootstrap\css\bootstrap-utilities.min.css" />
+    <Content Include="Index\assets\vendor\bootstrap\css\bootstrap-utilities.rtl.css" />
+    <Content Include="Index\assets\vendor\bootstrap\css\bootstrap-utilities.rtl.min.css" />
+    <Content Include="Index\assets\vendor\bootstrap\css\bootstrap.css" />
+    <Content Include="Index\assets\vendor\bootstrap\css\bootstrap.min.css" />
+    <Content Include="Index\assets\vendor\bootstrap\css\bootstrap.rtl.css" />
+    <Content Include="Index\assets\vendor\bootstrap\css\bootstrap.rtl.min.css" />
+    <Content Include="Index\assets\vendor\bootstrap\js\bootstrap.bundle.js" />
+    <Content Include="Index\assets\vendor\bootstrap\js\bootstrap.bundle.min.js" />
+    <Content Include="Index\assets\vendor\bootstrap\js\bootstrap.esm.js" />
+    <Content Include="Index\assets\vendor\bootstrap\js\bootstrap.esm.min.js" />
+    <Content Include="Index\assets\vendor\bootstrap\js\bootstrap.js" />
+    <Content Include="Index\assets\vendor\bootstrap\js\bootstrap.min.js" />
+    <Content Include="Index\assets\vendor\boxicons\css\animations.css" />
+    <Content Include="Index\assets\vendor\boxicons\css\boxicons.css" />
+    <Content Include="Index\assets\vendor\boxicons\css\boxicons.min.css" />
+    <Content Include="Index\assets\vendor\boxicons\css\transformations.css" />
+    <Content Include="Index\assets\vendor\boxicons\fonts\boxicons.svg" />
+    <Content Include="Index\assets\vendor\glightbox\css\glightbox.css" />
+    <Content Include="Index\assets\vendor\glightbox\css\glightbox.min.css" />
+    <Content Include="Index\assets\vendor\glightbox\css\plyr.css" />
+    <Content Include="Index\assets\vendor\glightbox\css\plyr.min.css" />
+    <Content Include="Index\assets\vendor\glightbox\js\glightbox.js" />
+    <Content Include="Index\assets\vendor\glightbox\js\glightbox.min.js" />
+    <Content Include="Index\assets\vendor\isotope-layout\isotope.pkgd.js" />
+    <Content Include="Index\assets\vendor\isotope-layout\isotope.pkgd.min.js" />
+    <Content Include="Index\assets\vendor\php-email-form\validate.js" />
+    <Content Include="Index\assets\vendor\purecounter\purecounter_vanilla.js" />
+    <Content Include="Index\assets\vendor\swiper\swiper-bundle.min.css" />
+    <Content Include="Index\assets\vendor\swiper\swiper-bundle.min.js" />
+    <Content Include="Index\forms\contact.php" />
+    <Content Include="Index\forms\Readme.txt" />
+    <Content Include="index.html" />
+    <Content Include="Login\Dsbd_Account_MS.aspx" />
+    <Content Include="Login\ForgotPassword.aspx" />
+    <Content Include="Login\Login.aspx" />
+    <Content Include="Login\main.js" />
+    <Content Include="Login\OtpVerification.aspx" />
+    <Content Include="Login\Register.aspx" />
+    <Content Include="Login\style.css" />
+    <Content Include="Login\style1.css" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Dsbd_css\Add_Item.aspx.cs">
+      <DependentUpon>Add_Item.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Dsbd_css\Add_Item.aspx.designer.cs">
+      <DependentUpon>Add_Item.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Dsbd_css\Balance_Sheet.aspx.cs">
+      <DependentUpon>Balance_Sheet.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Dsbd_css\Balance_Sheet.aspx.designer.cs">
+      <DependentUpon>Balance_Sheet.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Dsbd_css\Bank_Reconciliation_GridView.aspx.cs">
+      <DependentUpon>Bank_Reconciliation_GridView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Dsbd_css\Bank_Reconciliation_GridView.aspx.designer.cs">
+      <DependentUpon>Bank_Reconciliation_GridView.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Dsbd_css\Bank_Reconciliation.aspx.cs">
+      <DependentUpon>Bank_Reconciliation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Dsbd_css\Bank_Reconciliation.aspx.designer.cs">
+      <DependentUpon>Bank_Reconciliation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Dsbd_css\Dsbd_Account_MS.aspx.cs">
+      <DependentUpon>Dsbd_Account_MS.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Dsbd_css\Dsbd_Account_MS.aspx.designer.cs">
+      <DependentUpon>Dsbd_Account_MS.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Dsbd_css\Expenses.aspx.cs">
+      <DependentUpon>Expenses.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Dsbd_css\Expenses.aspx.designer.cs">
+      <DependentUpon>Expenses.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Dsbd_css\GridView_Service.aspx.cs">
+      <DependentUpon>GridView_Service.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Dsbd_css\GridView_Service.aspx.designer.cs">
+      <DependentUpon>GridView_Service.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Dsbd_css\Income.aspx.cs">
+      <DependentUpon>Income.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Dsbd_css\Income.aspx.designer.cs">
+      <DependentUpon>Income.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Dsbd_css\Invoice.aspx.cs">
+      <DependentUpon>Invoice.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Dsbd_css\Invoice.aspx.designer.cs">
+      <DependentUpon>Invoice.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Dsbd_css\Payment_In.aspx.cs">
+      <DependentUpon>Payment_In.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Dsbd_css\Payment_In.aspx.designer.cs">
+      <DependentUpon>Payment_In.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Dsbd_css\Payment_Out.aspx.cs">
+      <DependentUpon>Payment_Out.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Dsbd_css\Payment_Out.aspx.designer.cs">
+      <DependentUpon>Payment_Out.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Dsbd_css\POPUP.aspx.cs">
+      <DependentUpon>POPUP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Dsbd_css\POPUP.aspx.designer.cs">
+      <DependentUpon>POPUP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Dsbd_css\Profit.aspx.cs">
+      <DependentUpon>Profit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Dsbd_css\Profit.aspx.designer.cs">
+      <DependentUpon>Profit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Dsbd_css\Purchase.aspx.cs">
+      <DependentUpon>Purchase.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Dsbd_css\Purchase.aspx.designer.cs">
+      <DependentUpon>Purchase.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Dsbd_css\Purchase_GridView.aspx.cs">
+      <DependentUpon>Purchase_GridView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Dsbd_css\Purchase_GridView.aspx.designer.cs">
+      <DependentUpon>Purchase_GridView.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Dsbd_css\SaleReturn.aspx.cs">
+      <DependentUpon>SaleReturn.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Dsbd_css\SaleReturn.aspx.designer.cs">
+      <DependentUpon>SaleReturn.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Dsbd_css\Sales_Invoice.aspx.cs">
+      <DependentUpon>Sales_Invoice.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Dsbd_css\Sales_Invoice.aspx.designer.cs">
+      <DependentUpon>Sales_Invoice.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Dsbd_css\Sales_Invoice_GridView.aspx.cs">
+      <DependentUpon>Sales_Invoice_GridView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Dsbd_css\Sales_Invoice_GridView.aspx.designer.cs">
+      <DependentUpon>Sales_Invoice_GridView.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Dsbd_css\service.aspx.cs">
+      <DependentUpon>service.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Dsbd_css\service.aspx.designer.cs">
+      <DependentUpon>service.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Dsbd_css\Settings.aspx.cs">
+      <DependentUpon>Settings.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Dsbd_css\Settings.aspx.designer.cs">
+      <DependentUpon>Settings.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Dsbd_css\Stock_GridView.aspx.cs">
+      <DependentUpon>Stock_GridView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Dsbd_css\Stock_GridView.aspx.designer.cs">
+      <DependentUpon>Stock_GridView.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Dsbd_css\Transaction.aspx.cs">
+      <DependentUpon>Transaction.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Dsbd_css\Transaction.aspx.designer.cs">
+      <DependentUpon>Transaction.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Login\Dsbd_Account_MS.aspx.cs">
+      <DependentUpon>Dsbd_Account_MS.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login\Dsbd_Account_MS.aspx.designer.cs">
+      <DependentUpon>Dsbd_Account_MS.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Login\ForgotPassword.aspx.cs">
+      <DependentUpon>ForgotPassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login\ForgotPassword.aspx.designer.cs">
+      <DependentUpon>ForgotPassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Login\Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login\Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Login\OtpVerification.aspx.cs">
+      <DependentUpon>OtpVerification.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login\OtpVerification.aspx.designer.cs">
+      <DependentUpon>OtpVerification.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Login\Register.aspx.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login\Register.aspx.designer.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="assets\sass\base\_page.scss" />
+    <Content Include="assets\sass\base\_reset.scss" />
+    <Content Include="assets\sass\base\_typography.scss" />
+    <Content Include="assets\sass\components\_actions.scss" />
+    <Content Include="assets\sass\components\_box.scss" />
+    <Content Include="assets\sass\components\_button.scss" />
+    <Content Include="assets\sass\components\_contact.scss" />
+    <Content Include="assets\sass\components\_features.scss" />
+    <Content Include="assets\sass\components\_form.scss" />
+    <Content Include="assets\sass\components\_icon.scss" />
+    <Content Include="assets\sass\components\_icons.scss" />
+    <Content Include="assets\sass\components\_image.scss" />
+    <Content Include="assets\sass\components\_list.scss" />
+    <Content Include="assets\sass\components\_pagination.scss" />
+    <Content Include="assets\sass\components\_row.scss" />
+    <Content Include="assets\sass\components\_section.scss" />
+    <Content Include="assets\sass\components\_table.scss" />
+    <Content Include="assets\sass\layout\_banner.scss" />
+    <Content Include="assets\sass\layout\_footer.scss" />
+    <Content Include="assets\sass\layout\_header.scss" />
+    <Content Include="assets\sass\layout\_menu.scss" />
+    <Content Include="assets\sass\layout\_wrapper.scss" />
+    <Content Include="assets\sass\libs\_breakpoints.scss" />
+    <Content Include="assets\sass\libs\_functions.scss" />
+    <Content Include="assets\sass\libs\_html-grid.scss" />
+    <Content Include="assets\sass\libs\_mixins.scss" />
+    <Content Include="assets\sass\libs\_vars.scss" />
+    <Content Include="assets\sass\libs\_vendor.scss" />
+    <Content Include="assets\sass\main.scss" />
+    <Content Include="assets\sass\noscript.scss" />
+    <Content Include="assets\webfonts\fa-brands-400.eot" />
+    <Content Include="assets\webfonts\fa-brands-400.ttf" />
+    <Content Include="assets\webfonts\fa-brands-400.woff" />
+    <Content Include="assets\webfonts\fa-brands-400.woff2" />
+    <Content Include="assets\webfonts\fa-regular-400.eot" />
+    <Content Include="assets\webfonts\fa-regular-400.ttf" />
+    <Content Include="assets\webfonts\fa-regular-400.woff" />
+    <Content Include="assets\webfonts\fa-regular-400.woff2" />
+    <Content Include="assets\webfonts\fa-solid-900.eot" />
+    <Content Include="assets\webfonts\fa-solid-900.ttf" />
+    <Content Include="assets\webfonts\fa-solid-900.woff" />
+    <Content Include="assets\webfonts\fa-solid-900.woff2" />
+    <Content Include="Dsbd_css\assets\images\big\Thumbs.db" />
+    <Content Include="Dsbd_css\assets\images\img001.webp" />
+    <Content Include="Dsbd_css\assets\libs\bootstrap\dist\css\bootstrap-grid.css.map" />
+    <Content Include="Dsbd_css\assets\libs\bootstrap\dist\css\bootstrap-grid.min.css.map" />
+    <Content Include="Dsbd_css\assets\libs\bootstrap\dist\css\bootstrap-grid.rtl.css.map" />
+    <Content Include="Dsbd_css\assets\libs\bootstrap\dist\css\bootstrap-grid.rtl.min.css.map" />
+    <Content Include="Dsbd_css\assets\libs\bootstrap\dist\css\bootstrap-reboot.css.map" />
+    <Content Include="Dsbd_css\assets\libs\bootstrap\dist\css\bootstrap-reboot.min.css.map" />
+    <Content Include="Dsbd_css\assets\libs\bootstrap\dist\css\bootstrap-reboot.rtl.css.map" />
+    <Content Include="Dsbd_css\assets\libs\bootstrap\dist\css\bootstrap-reboot.rtl.min.css.map" />
+    <Content Include="Dsbd_css\assets\libs\bootstrap\dist\css\bootstrap-utilities.css.map" />
+    <Content Include="Dsbd_css\assets\libs\bootstrap\dist\css\bootstrap-utilities.min.css.map" />
+    <Content Include="Dsbd_css\assets\libs\bootstrap\dist\css\bootstrap-utilities.rtl.css.map" />
+    <Content Include="Dsbd_css\assets\libs\bootstrap\dist\css\bootstrap-utilities.rtl.min.css.map" />
+    <Content Include="Dsbd_css\assets\libs\bootstrap\dist\css\bootstrap.css.map" />
+    <Content Include="Dsbd_css\assets\libs\bootstrap\dist\css\bootstrap.min.css.map" />
+    <Content Include="Dsbd_css\assets\libs\bootstrap\dist\css\bootstrap.rtl.css.map" />
+    <Content Include="Dsbd_css\assets\libs\bootstrap\dist\css\bootstrap.rtl.min.css.map" />
+    <Content Include="Dsbd_css\assets\libs\bootstrap\dist\js\bootstrap.bundle.js.map" />
+    <Content Include="Dsbd_css\assets\libs\bootstrap\dist\js\bootstrap.bundle.min.js.map" />
+    <Content Include="Dsbd_css\assets\libs\bootstrap\dist\js\bootstrap.esm.js.map" />
+    <Content Include="Dsbd_css\assets\libs\bootstrap\dist\js\bootstrap.esm.min.js.map" />
+    <Content Include="Dsbd_css\assets\libs\bootstrap\dist\js\bootstrap.js.map" />
+    <Content Include="Dsbd_css\assets\libs\bootstrap\dist\js\bootstrap.min.js.map" />
+    <Content Include="Dsbd_css\assets\libs\datatables\media\images\Sorting icons.psd" />
+    <Content Include="Dsbd_css\assets\libs\flot.tooltip\.bower.json" />
+    <Content Include="Dsbd_css\assets\libs\flot.tooltip\bower.json" />
+    <Content Include="Dsbd_css\assets\libs\flot\.bower.json" />
+    <Content Include="Dsbd_css\assets\libs\flot\.gitignore" />
+    <Content Include="Dsbd_css\assets\libs\flot\.travis.yml" />
+    <Content Include="Dsbd_css\assets\libs\flot\API.md" />
+    <Content Include="Dsbd_css\assets\libs\flot\component.json" />
+    <Content Include="Dsbd_css\assets\libs\flot\CONTRIBUTING.md" />
+    <Content Include="Dsbd_css\assets\libs\flot\examples\ajax\data-eu-gdp-growth-1.json" />
+    <Content Include="Dsbd_css\assets\libs\flot\examples\ajax\data-eu-gdp-growth-2.json" />
+    <Content Include="Dsbd_css\assets\libs\flot\examples\ajax\data-eu-gdp-growth-3.json" />
+    <Content Include="Dsbd_css\assets\libs\flot\examples\ajax\data-eu-gdp-growth-4.json" />
+    <Content Include="Dsbd_css\assets\libs\flot\examples\ajax\data-eu-gdp-growth-5.json" />
+    <Content Include="Dsbd_css\assets\libs\flot\examples\ajax\data-eu-gdp-growth.json" />
+    <Content Include="Dsbd_css\assets\libs\flot\examples\ajax\data-japan-gdp-growth.json" />
+    <Content Include="Dsbd_css\assets\libs\flot\examples\ajax\data-usa-gdp-growth.json" />
+    <Content Include="Dsbd_css\assets\libs\flot\examples\axes-time-zones\tz\africa" />
+    <Content Include="Dsbd_css\assets\libs\flot\examples\axes-time-zones\tz\antarctica" />
+    <Content Include="Dsbd_css\assets\libs\flot\examples\axes-time-zones\tz\asia" />
+    <Content Include="Dsbd_css\assets\libs\flot\examples\axes-time-zones\tz\australasia" />
+    <Content Include="Dsbd_css\assets\libs\flot\examples\axes-time-zones\tz\backward" />
+    <Content Include="Dsbd_css\assets\libs\flot\examples\axes-time-zones\tz\etcetera" />
+    <Content Include="Dsbd_css\assets\libs\flot\examples\axes-time-zones\tz\europe" />
+    <Content Include="Dsbd_css\assets\libs\flot\examples\axes-time-zones\tz\factory" />
+    <Content Include="Dsbd_css\assets\libs\flot\examples\axes-time-zones\tz\iso3166.tab" />
+    <Content Include="Dsbd_css\assets\libs\flot\examples\axes-time-zones\tz\leapseconds" />
+    <Content Include="Dsbd_css\assets\libs\flot\examples\axes-time-zones\tz\northamerica" />
+    <Content Include="Dsbd_css\assets\libs\flot\examples\axes-time-zones\tz\pacificnew" />
+    <Content Include="Dsbd_css\assets\libs\flot\examples\axes-time-zones\tz\solar87" />
+    <Content Include="Dsbd_css\assets\libs\flot\examples\axes-time-zones\tz\solar88" />
+    <Content Include="Dsbd_css\assets\libs\flot\examples\axes-time-zones\tz\solar89" />
+    <Content Include="Dsbd_css\assets\libs\flot\examples\axes-time-zones\tz\southamerica" />
+    <Content Include="Dsbd_css\assets\libs\flot\examples\axes-time-zones\tz\systemv" />
+    <Content Include="Dsbd_css\assets\libs\flot\examples\axes-time-zones\tz\yearistype.sh" />
+    <Content Include="Dsbd_css\assets\libs\flot\examples\axes-time-zones\tz\zone.tab" />
+    <Content Include="Dsbd_css\assets\libs\flot\FAQ.md" />
+    <Content Include="Dsbd_css\assets\libs\flot\flot.jquery.json" />
+    <Content Include="Dsbd_css\assets\libs\flot\Makefile" />
+    <Content Include="Dsbd_css\assets\libs\flot\NEWS.md" />
+    <Content Include="Dsbd_css\assets\libs\flot\package.json" />
+    <Content Include="Dsbd_css\assets\libs\flot\PLUGINS.md" />
+    <Content Include="Dsbd_css\assets\libs\flot\README.md" />
+    <Content Include="Dsbd_css\assets\libs\jquery-asColor\dist\jquery-asColor.min.js.map" />
+    <Content Include="Dsbd_css\assets\libs\jquery-asColor\LICENSE" />
+    <Content Include="Dsbd_css\assets\libs\jquery-asColor\package.json" />
+    <Content Include="Dsbd_css\assets\libs\jquery-asColor\README.md" />
+    <Content Include="Dsbd_css\assets\libs\jquery-asGradient\dist\jquery-asGradient.min.js.map" />
+    <Content Include="Dsbd_css\assets\libs\jquery-asGradient\LICENSE" />
+    <Content Include="Dsbd_css\assets\libs\jquery-asGradient\package.json" />
+    <Content Include="Dsbd_css\assets\libs\jquery-asGradient\README.md" />
+    <Content Include="Dsbd_css\assets\libs\jquery-minicolors\component.json" />
+    <Content Include="Dsbd_css\assets\libs\jquery-steps\build\jquery.steps-1.1.0.zip" />
+    <Content Include="Dsbd_css\assets\libs\jquery-steps\build\jQuery.Steps.1.1.0.nupkg" />
+    <Content Include="Dsbd_css\assets\libs\jquery-steps\nuget\jQuery.Steps.nuspec" />
+    <Content Include="Dsbd_css\assets\libs\jquery-steps\steps.jquery.json" />
+    <Content Include="Dsbd_css\dist\css\icons\font-awesome\less\fa-brands.less" />
+    <Content Include="Dsbd_css\dist\css\icons\font-awesome\less\fa-regular.less" />
+    <Content Include="Dsbd_css\dist\css\icons\font-awesome\less\fa-solid.less" />
+    <Content Include="Dsbd_css\dist\css\icons\font-awesome\less\fontawesome.less" />
+    <Content Include="Dsbd_css\dist\css\icons\font-awesome\less\_animated.less" />
+    <Content Include="Dsbd_css\dist\css\icons\font-awesome\less\_bordered-pulled.less" />
+    <Content Include="Dsbd_css\dist\css\icons\font-awesome\less\_core.less" />
+    <Content Include="Dsbd_css\dist\css\icons\font-awesome\less\_fixed-width.less" />
+    <Content Include="Dsbd_css\dist\css\icons\font-awesome\less\_icons.less" />
+    <Content Include="Dsbd_css\dist\css\icons\font-awesome\less\_larger.less" />
+    <Content Include="Dsbd_css\dist\css\icons\font-awesome\less\_list.less" />
+    <Content Include="Dsbd_css\dist\css\icons\font-awesome\less\_mixins.less" />
+    <Content Include="Dsbd_css\dist\css\icons\font-awesome\less\_rotated-flipped.less" />
+    <Content Include="Dsbd_css\dist\css\icons\font-awesome\less\_screen-reader.less" />
+    <Content Include="Dsbd_css\dist\css\icons\font-awesome\less\_stacked.less" />
+    <Content Include="Dsbd_css\dist\css\icons\font-awesome\less\_variables.less" />
+    <Content Include="Dsbd_css\dist\css\icons\font-awesome\scss\fa-brands.scss" />
+    <Content Include="Dsbd_css\dist\css\icons\font-awesome\scss\fa-regular.scss" />
+    <Content Include="Dsbd_css\dist\css\icons\font-awesome\scss\fa-solid.scss" />
+    <Content Include="Dsbd_css\dist\css\icons\font-awesome\scss\fontawesome.scss" />
+    <Content Include="Dsbd_css\dist\css\icons\font-awesome\scss\_animated.scss" />
+    <Content Include="Dsbd_css\dist\css\icons\font-awesome\scss\_bordered-pulled.scss" />
+    <Content Include="Dsbd_css\dist\css\icons\font-awesome\scss\_core.scss" />
+    <Content Include="Dsbd_css\dist\css\icons\font-awesome\scss\_fixed-width.scss" />
+    <Content Include="Dsbd_css\dist\css\icons\font-awesome\scss\_icons.scss" />
+    <Content Include="Dsbd_css\dist\css\icons\font-awesome\scss\_larger.scss" />
+    <Content Include="Dsbd_css\dist\css\icons\font-awesome\scss\_list.scss" />
+    <Content Include="Dsbd_css\dist\css\icons\font-awesome\scss\_mixins.scss" />
+    <Content Include="Dsbd_css\dist\css\icons\font-awesome\scss\_rotated-flipped.scss" />
+    <Content Include="Dsbd_css\dist\css\icons\font-awesome\scss\_screen-reader.scss" />
+    <Content Include="Dsbd_css\dist\css\icons\font-awesome\scss\_stacked.scss" />
+    <Content Include="Dsbd_css\dist\css\icons\font-awesome\scss\_variables.scss" />
+    <Content Include="Dsbd_css\dist\css\icons\font-awesome\webfonts\fa-brands-400.eot" />
+    <Content Include="Dsbd_css\dist\css\icons\font-awesome\webfonts\fa-brands-400.ttf" />
+    <Content Include="Dsbd_css\dist\css\icons\font-awesome\webfonts\fa-brands-400.woff" />
+    <Content Include="Dsbd_css\dist\css\icons\font-awesome\webfonts\fa-brands-400.woff2" />
+    <Content Include="Dsbd_css\dist\css\icons\font-awesome\webfonts\fa-regular-400.eot" />
+    <Content Include="Dsbd_css\dist\css\icons\font-awesome\webfonts\fa-regular-400.ttf" />
+    <Content Include="Dsbd_css\dist\css\icons\font-awesome\webfonts\fa-regular-400.woff" />
+    <Content Include="Dsbd_css\dist\css\icons\font-awesome\webfonts\fa-regular-400.woff2" />
+    <Content Include="Dsbd_css\dist\css\icons\font-awesome\webfonts\fa-solid-900.eot" />
+    <Content Include="Dsbd_css\dist\css\icons\font-awesome\webfonts\fa-solid-900.ttf" />
+    <Content Include="Dsbd_css\dist\css\icons\font-awesome\webfonts\fa-solid-900.woff" />
+    <Content Include="Dsbd_css\dist\css\icons\font-awesome\webfonts\fa-solid-900.woff2" />
+    <Content Include="Dsbd_css\dist\css\icons\material-design-iconic-font\css\materialdesignicons.min.css.map" />
+    <Content Include="Dsbd_css\dist\css\icons\material-design-iconic-font\fonts\Material-Design-Iconic-Font.eot" />
+    <Content Include="Dsbd_css\dist\css\icons\material-design-iconic-font\fonts\Material-Design-Iconic-Font.ttf" />
+    <Content Include="Dsbd_css\dist\css\icons\material-design-iconic-font\fonts\Material-Design-Iconic-Font.woff" />
+    <Content Include="Dsbd_css\dist\css\icons\material-design-iconic-font\fonts\Material-Design-Iconic-Font.woff2" />
+    <Content Include="Dsbd_css\dist\css\icons\material-design-iconic-font\fonts\materialdesignicons-webfont.eot" />
+    <Content Include="Dsbd_css\dist\css\icons\material-design-iconic-font\fonts\materialdesignicons-webfont.ttf" />
+    <Content Include="Dsbd_css\dist\css\icons\material-design-iconic-font\fonts\materialdesignicons-webfont.woff" />
+    <Content Include="Dsbd_css\dist\css\icons\material-design-iconic-font\fonts\materialdesignicons-webfont.woff2" />
+    <Content Include="Dsbd_css\dist\css\icons\themify-icons\fonts\themify.eot" />
+    <Content Include="Dsbd_css\dist\css\icons\themify-icons\fonts\themify.ttf" />
+    <Content Include="Dsbd_css\dist\css\icons\themify-icons\fonts\themify.woff" />
+    <Content Include="Dsbd_css\dist\css\icons\themify-icons\themify-icons.less" />
+    <Content Include="Dsbd_css\dist\css\icons\weather-icons\fonts\weathericons-regular-webfont.eot" />
+    <Content Include="Dsbd_css\dist\css\icons\weather-icons\fonts\weathericons-regular-webfont.ttf" />
+    <Content Include="Dsbd_css\dist\css\icons\weather-icons\fonts\weathericons-regular-webfont.woff" />
+    <Content Include="Dsbd_css\dist\css\icons\weather-icons\fonts\weathericons-regular-webfont.woff2" />
+    <Content Include="Dsbd_css\dist\css\icons\weather-icons\less\icon-classes\classes-beaufort.less" />
+    <Content Include="Dsbd_css\dist\css\icons\weather-icons\less\icon-classes\classes-day.less" />
+    <Content Include="Dsbd_css\dist\css\icons\weather-icons\less\icon-classes\classes-direction.less" />
+    <Content Include="Dsbd_css\dist\css\icons\weather-icons\less\icon-classes\classes-misc.less" />
+    <Content Include="Dsbd_css\dist\css\icons\weather-icons\less\icon-classes\classes-moon-aliases.less" />
+    <Content Include="Dsbd_css\dist\css\icons\weather-icons\less\icon-classes\classes-moon.less" />
+    <Content Include="Dsbd_css\dist\css\icons\weather-icons\less\icon-classes\classes-neutral.less" />
+    <Content Include="Dsbd_css\dist\css\icons\weather-icons\less\icon-classes\classes-night.less" />
+    <Content Include="Dsbd_css\dist\css\icons\weather-icons\less\icon-classes\classes-time.less" />
+    <Content Include="Dsbd_css\dist\css\icons\weather-icons\less\icon-classes\classes-wind-aliases.less" />
+    <Content Include="Dsbd_css\dist\css\icons\weather-icons\less\icon-classes\classes-wind-degrees.less" />
+    <Content Include="Dsbd_css\dist\css\icons\weather-icons\less\icon-classes\classes-wind.less" />
+    <Content Include="Dsbd_css\dist\css\icons\weather-icons\less\icon-variables\variables-beaufort.less" />
+    <Content Include="Dsbd_css\dist\css\icons\weather-icons\less\icon-variables\variables-day.less" />
+    <Content Include="Dsbd_css\dist\css\icons\weather-icons\less\icon-variables\variables-direction.less" />
+    <Content Include="Dsbd_css\dist\css\icons\weather-icons\less\icon-variables\variables-misc.less" />
+    <Content Include="Dsbd_css\dist\css\icons\weather-icons\less\icon-variables\variables-moon.less" />
+    <Content Include="Dsbd_css\dist\css\icons\weather-icons\less\icon-variables\variables-neutral.less" />
+    <Content Include="Dsbd_css\dist\css\icons\weather-icons\less\icon-variables\variables-night.less" />
+    <Content Include="Dsbd_css\dist\css\icons\weather-icons\less\icon-variables\variables-time.less" />
+    <Content Include="Dsbd_css\dist\css\icons\weather-icons\less\icon-variables\variables-wind-names.less" />
+    <Content Include="Dsbd_css\dist\css\icons\weather-icons\less\mappings\wi-forecast-io.less" />
+    <Content Include="Dsbd_css\dist\css\icons\weather-icons\less\mappings\wi-owm.less" />
+    <Content Include="Dsbd_css\dist\css\icons\weather-icons\less\mappings\wi-wmo4680.less" />
+    <Content Include="Dsbd_css\dist\css\icons\weather-icons\less\mappings\wi-yahoo.less" />
+    <Content Include="Dsbd_css\dist\css\icons\weather-icons\less\weather-icons-classes.less" />
+    <Content Include="Dsbd_css\dist\css\icons\weather-icons\less\weather-icons-core.less" />
+    <Content Include="Dsbd_css\dist\css\icons\weather-icons\less\weather-icons-variables.less" />
+    <Content Include="Dsbd_css\dist\css\icons\weather-icons\less\weather-icons-wind.less" />
+    <Content Include="Dsbd_css\dist\css\icons\weather-icons\less\weather-icons-wind.min.less" />
+    <Content Include="Dsbd_css\dist\css\icons\weather-icons\less\weather-icons.less" />
+    <Content Include="Dsbd_css\dist\css\icons\weather-icons\less\weather-icons.min.less" />
+    <Content Include="Dsbd_css\dist\css\icons\weather-icons\sass\icon-classes\classes-beaufort.scss" />
+    <Content Include="Dsbd_css\dist\css\icons\weather-icons\sass\icon-classes\classes-day.scss" />
+    <Content Include="Dsbd_css\dist\css\icons\weather-icons\sass\icon-classes\classes-direction.scss" />
+    <Content Include="Dsbd_css\dist\css\icons\weather-icons\sass\icon-classes\classes-misc.scss" />
+    <Content Include="Dsbd_css\dist\css\icons\weather-icons\sass\icon-classes\classes-moon-aliases.scss" />
+    <Content Include="Dsbd_css\dist\css\icons\weather-icons\sass\icon-classes\classes-moon.scss" />
+    <Content Include="Dsbd_css\dist\css\icons\weather-icons\sass\icon-classes\classes-neutral.scss" />
+    <Content Include="Dsbd_css\dist\css\icons\weather-icons\sass\icon-classes\classes-night.scss" />
+    <Content Include="Dsbd_css\dist\css\icons\weather-icons\sass\icon-classes\classes-time.scss" />
+    <Content Include="Dsbd_css\dist\css\icons\weather-icons\sass\icon-classes\classes-wind-aliases.scss" />
+    <Content Include="Dsbd_css\dist\css\icons\weather-icons\sass\icon-classes\classes-wind-degrees.scss" />
+    <Content Include="Dsbd_css\dist\css\icons\weather-icons\sass\icon-classes\classes-wind.scss" />
+    <Content Include="Dsbd_css\dist\css\icons\weather-icons\sass\icon-variables\variables-beaufort.scss" />
+    <Content Include="Dsbd_css\dist\css\icons\weather-icons\sass\icon-variables\variables-day.scss" />
+    <Content Include="Dsbd_css\dist\css\icons\weather-icons\sass\icon-variables\variables-direction.scss" />
+    <Content Include="Dsbd_css\dist\css\icons\weather-icons\sass\icon-variables\variables-misc.scss" />
+    <Content Include="Dsbd_css\dist\css\icons\weather-icons\sass\icon-variables\variables-moon.scss" />
+    <Content Include="Dsbd_css\dist\css\icons\weather-icons\sass\icon-variables\variables-neutral.scss" />
+    <Content Include="Dsbd_css\dist\css\icons\weather-icons\sass\icon-variables\variables-night.scss" />
+    <Content Include="Dsbd_css\dist\css\icons\weather-icons\sass\icon-variables\variables-time.scss" />
+    <Content Include="Dsbd_css\dist\css\icons\weather-icons\sass\icon-variables\variables-wind-names.scss" />
+    <Content Include="Dsbd_css\dist\css\icons\weather-icons\sass\mappings\wi-forecast-io.scss" />
+    <Content Include="Dsbd_css\dist\css\icons\weather-icons\sass\mappings\wi-owm.scss" />
+    <Content Include="Dsbd_css\dist\css\icons\weather-icons\sass\mappings\wi-wmo4680.scss" />
+    <Content Include="Dsbd_css\dist\css\icons\weather-icons\sass\mappings\wi-yahoo.scss" />
+    <Content Include="Dsbd_css\dist\css\icons\weather-icons\sass\weather-icons-classes.scss" />
+    <Content Include="Dsbd_css\dist\css\icons\weather-icons\sass\weather-icons-core.scss" />
+    <Content Include="Dsbd_css\dist\css\icons\weather-icons\sass\weather-icons-variables.scss" />
+    <Content Include="Dsbd_css\dist\css\icons\weather-icons\sass\weather-icons-wind.min.scss" />
+    <Content Include="Dsbd_css\dist\css\icons\weather-icons\sass\weather-icons-wind.scss" />
+    <Content Include="Dsbd_css\dist\css\icons\weather-icons\sass\weather-icons.min.scss" />
+    <Content Include="Dsbd_css\dist\css\icons\weather-icons\sass\weather-icons.scss" />
+    <Content Include="Dsbd_css\dist\css\materialdesignicons.min.css.map" />
+    <Content Include="libman.json" />
+    <Content Include="Index\assets\vendor\bootstrap-icons\bootstrap-icons.json" />
+    <Content Include="Index\assets\vendor\bootstrap-icons\bootstrap-icons.scss" />
+    <Content Include="Index\assets\vendor\bootstrap-icons\fonts\bootstrap-icons.woff" />
+    <Content Include="Index\assets\vendor\bootstrap-icons\fonts\bootstrap-icons.woff2" />
+    <Content Include="Index\assets\vendor\bootstrap\css\bootstrap-grid.css.map" />
+    <Content Include="Index\assets\vendor\bootstrap\css\bootstrap-grid.min.css.map" />
+    <Content Include="Index\assets\vendor\bootstrap\css\bootstrap-grid.rtl.css.map" />
+    <Content Include="Index\assets\vendor\bootstrap\css\bootstrap-grid.rtl.min.css.map" />
+    <Content Include="Index\assets\vendor\bootstrap\css\bootstrap-reboot.css.map" />
+    <Content Include="Index\assets\vendor\bootstrap\css\bootstrap-reboot.min.css.map" />
+    <Content Include="Index\assets\vendor\bootstrap\css\bootstrap-reboot.rtl.css.map" />
+    <Content Include="Index\assets\vendor\bootstrap\css\bootstrap-reboot.rtl.min.css.map" />
+    <Content Include="Index\assets\vendor\bootstrap\css\bootstrap-utilities.css.map" />
+    <Content Include="Index\assets\vendor\bootstrap\css\bootstrap-utilities.min.css.map" />
+    <Content Include="Index\assets\vendor\bootstrap\css\bootstrap-utilities.rtl.css.map" />
+    <Content Include="Index\assets\vendor\bootstrap\css\bootstrap-utilities.rtl.min.css.map" />
+    <Content Include="Index\assets\vendor\bootstrap\css\bootstrap.css.map" />
+    <Content Include="Index\assets\vendor\bootstrap\css\bootstrap.min.css.map" />
+    <Content Include="Index\assets\vendor\bootstrap\css\bootstrap.rtl.css.map" />
+    <Content Include="Index\assets\vendor\bootstrap\css\bootstrap.rtl.min.css.map" />
+    <Content Include="Index\assets\vendor\bootstrap\js\bootstrap.bundle.js.map" />
+    <Content Include="Index\assets\vendor\bootstrap\js\bootstrap.bundle.min.js.map" />
+    <Content Include="Index\assets\vendor\bootstrap\js\bootstrap.esm.js.map" />
+    <Content Include="Index\assets\vendor\bootstrap\js\bootstrap.esm.min.js.map" />
+    <Content Include="Index\assets\vendor\bootstrap\js\bootstrap.js.map" />
+    <Content Include="Index\assets\vendor\bootstrap\js\bootstrap.min.js.map" />
+    <Content Include="Index\assets\vendor\boxicons\fonts\boxicons.eot" />
+    <Content Include="Index\assets\vendor\boxicons\fonts\boxicons.ttf" />
+    <Content Include="Index\assets\vendor\boxicons\fonts\boxicons.woff" />
+    <Content Include="Index\assets\vendor\boxicons\fonts\boxicons.woff2" />
+    <Content Include="Index\assets\vendor\purecounter\purecounter_vanilla.js.map" />
+    <Content Include="Index\assets\vendor\swiper\swiper-bundle.min.js.map" />
+    <None Include="packages.config" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup />
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>50372</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>https://localhost:44363/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', 'packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
